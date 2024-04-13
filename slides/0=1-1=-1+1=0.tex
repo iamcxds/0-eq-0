@@ -156,15 +156,15 @@ $A=B$ says $A$ \textbf{is} equal to $B$, \textbf{how} they are equal depends on 
 
 \begin{frame}{Homotopy groups}
 To understand a space $X$, we use some homotopy invariants:
-
+\pause
 \begin{itemize}
-  \item $\pi_0 X \in \mathrm{Set} $, how many "pieces" $X$ has. 
+  \item $\pi_0 X \in \mathrm{Set} $, connected component, how many "pieces" $X$ has. 
     \pause
-  \item Chose a base point $x\in X$, Let $ \mathrm{Map}_*(\mathbb{S}^1,X) \in \mathrm{Space}$ be the space of loops in $X$ started from $x$. 
+  \item Chose a base point $x\in X$, Let $ \mathrm{Map}_*(\mathbb{S}^1,X)  \in \mathrm{Space}$ be the space of loops in $X$ started from $x$. Here $\mathrm{Map}_*$ is the space of pointed continue maps, the continue structure comes from deform maps. 
     \pause
-  \item $ \pi_1(X,x)= \pi_0\mathrm{Map}_*(\mathbb{S}^1,X) \in \mathrm{Group}$, how many loops in $X$ up to deformation.
+  \item $ \pi_1(X,x) := \pi_0\mathrm{Map}_*(\mathbb{S}^1,X) \in \mathrm{Group}$, how many loops in $X$ up to deformation.
     \pause
-  \item $i>1, \pi_i(X,x)= \pi_0\mathrm{Map}_*(\mathbb{S}^i,X)\cong \pi_0\mathrm{Map}_*(\mathbb{S}^1,\mathrm{Map}_*(\mathbb{S}^{i-1},X)) \in \mathrm{Abel}$
+  \item $i>1, \pi_i(X,x) := \pi_0\mathrm{Map}_*(\mathbb{S}^i,X)\cong \pi_0\mathrm{Map}_*(\mathbb{S}^1,\mathrm{Map}_*(\mathbb{S}^{i-1},X)) \in \mathrm{Abel}$
 \end{itemize}
 \pause
 Let us study the cases $X=\mathbb{S}^n$.
@@ -174,7 +174,7 @@ Let us study the cases $X=\mathbb{S}^n$.
 \begin{itemize}
   \item For $i<n$, $\pi_i(\mathbb{S}^n)=\{ 0 \}$, where $0: \mathbb{S}^i\to * \xrightarrow{\mathrm{base}} \mathbb{S}^n$.
     \pause
-  \item For $\pi_n(\mathbb{S}^n)$, we consider the space $\mathrm{End}_*(\mathbb{S}^n)=\mathrm{Map}_*(\mathbb{S}^n,\mathbb{S}^n)$.
+  \item For $\pi_n(\mathbb{S}^n)$, we consider the space $\mathrm{End}_*(\mathbb{S}^n):=\mathrm{Map}_*(\mathbb{S}^n,\mathbb{S}^n)$.
 \end{itemize}
 \pause
 
@@ -256,7 +256,7 @@ Let $f\in \mathrm{End}_*(\mathbb{S}^n)$, take a small disk $D^n_{\epsilon}\subse
 }
 \only<5>{
 This gives an isomorphism to the configuration space of disks. 
-\[ \mathrm{End}_*(\mathbb{S}^n) \cong \mathrm{Conf}( \mathbb{R}^n) = \bigcup_{j,k}\mathrm{Emb}( \bigsqcup_j D^n_+ \sqcup \bigsqcup_k D^n_- , \mathbb{R}^n )
+\[ \mathrm{End}_*(\mathbb{S}^n) \cong \mathrm{Conf}^{fr}( \mathbb{R}^n) = \bigcup_{j,k}\mathrm{Emb}( \bigsqcup_j D^n_+ \sqcup \bigsqcup_k D^n_- , \mathbb{R}^n )
 \]
 Therefore, $\pi_0 \mathrm{End}_*(\mathbb{S}^n) \cong \mathbb{Z}, (j,k) \mapsto j-k$
 }
@@ -405,9 +405,9 @@ Therefore, $\pi_0 \mathrm{End}_*(\mathbb{S}^n) \cong \mathbb{Z}, (j,k) \mapsto j
 How to see that?
 \pause
 \[
-  \mathrm{Map}_*(\mathbb{S}^3,\mathbb{S}^2) \cong \mathrm{Map}_*(\mathbb{S}^1,\mathrm{End}_*(\mathbb{S}^n))\to \mathrm{Map}_*([0,1],\mathrm{End}_*(\mathbb{S}^n))
+  \mathrm{Map}_*(\mathbb{S}^{n+1},\mathbb{S}^n) \cong \mathrm{Map}_*(\mathbb{S}^1,\mathrm{End}_*(\mathbb{S}^n))\to \mathrm{Map}_*([0,1],\mathrm{End}_*(\mathbb{S}^n))
 \]
-Then $H$ corresponds to a path (deformation or homotopy) form $0\in \mathrm{End}_*(\mathbb{S}^n)$ to $0$ itself.
+Then $H$ corresponds to a path (deformation or homotopy) form $0\in \mathrm{End}_*(\mathbb{S}^2)$ to $0$ itself.
 
 \end{frame}
 \begin{frame}{Visualize $H$ as deformation}
@@ -425,7 +425,8 @@ Then $H$ corresponds to a path (deformation or homotopy) form $0\in \mathrm{End}
 \end{frame}
 \section{Algebra}
 
-\begin{frame}{How to define $\mathbb{Z}$}
+\begin{frame}{How to define $\mathbb{Z}$ ?}
+\pause
 We can define natural number $\mathbb{N}$ as isomorphic classes of finite sets.
 \[
   \mathrm{FinSet}_{/\cong} \xrightarrow{|\cdot|} \mathbb{N}, |X \sqcup Y| = |X|+|Y| 
@@ -433,7 +434,7 @@ We can define natural number $\mathbb{N}$ as isomorphic classes of finite sets.
 How to define integral number $\mathbb{Z}$ with finite sets? 
 
 \pause
-We use the \textbf{Grothendieck group} $K_0(\mathrm{FinSet})$
+We use the \textbf{Grothendieck group} $K_0(\mathrm{FinSet})$ (we can think finite set as $\mathbb{F}_1 \text{-}\mathrm{mod}$):
 \[
   K_0(\mathrm{FinSet}) = \{ (X,Y)\in (\mathrm{FinSet}_{/\cong})^2   \} / \{ (X \sqcup Z , Y \sqcup Z) \sim (X,Y)\}
 \]
@@ -498,7 +499,7 @@ But what is $K_i(\mathrm{FinSet})$ for $i>0$ ?
 \begin{itemize}
   \item $\pi_0(F)= \mathrm{FinSet}_{/\cong} \cong \mathbb{N} $.
   \item $\pi_1(F,x) = \mathrm{S}_{|x|}$ the permutation group. 
-  \item $\pi_i(F,x) = \{0\}$ for $i>0$ (one can never deform an isomorphism of set to another). 
+  \item $\pi_i(F,x) = \{0\}$ for $i>1$ (one can never deform an isomorphism of set to another). 
 
 \end{itemize}
 \end{frame}
@@ -680,7 +681,7 @@ But what is $K_i(\mathrm{FinSet})$ for $i>0$ ?
   \begin{itemize}
     \item In fact, $K_i(\mathrm{FinSet}) \cong \lim_{n\to \infty}\pi_{i+n}(\mathbb{S}^n) = \pi^s_i(\mathbb{S})$.
   \pause
-    \item So, $K(F)$ can be seen as $\mathrm{Conf}( \mathbb{R}^{\infty})$, and both the Hopf map $H$ and $h$ can be represented as movements within it.
+\item So, $K(F)$ can be also seen as $\mathrm{Conf}^{fr}( \mathbb{R}^{\infty})$, and both the Hopf map $H$ and $h$ can be represented as movements within it.
   \end{itemize}
   \pause
   And they are the same!
@@ -874,7 +875,7 @@ If we put the movement in 3D space:
 
 \pause
 \column{0.5\linewidth}
-This provides a framed circle, meaning an embedding $\mathbb{S}^1 \hookrightarrow \mathbb{R}^n$ with a trivialization of the normal bundle. We denote $\Omega^{fr}_i$ as the cobordism classes of $i$-dimensional framed manifolds. \pause And we have:
+This provides a framed circle, meaning an embedding $\mathbb{S}^1 \hookrightarrow \mathbb{R}^n$ with a \textbf{ trivialization } $\tau$ of the normal bundle. We denote $\Omega^{fr}_i$ as the group of cobordism classes of $i$-dimensional framed manifolds. \pause And we also have:
 
 \[
   \Omega^{fr}_i \cong \pi^s_i(\mathbb{S}) 
