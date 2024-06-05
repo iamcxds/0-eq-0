@@ -86,8 +86,8 @@
 \title{\texorpdfstring{$0=\textcolor{red}{1}\textcolor{blue}{ -1 }=\textcolor{blue}{ -1 }+\textcolor{red}{1}=0$}{0=1-1=-1+1=0}}
 \subtitle{From Elementary School to Higher Algebras}
 \author{Keyao Peng}
-\institute{IMB}
-
+\institute{Université de Bourgogne}
+\date{}
 \begin{document}
 
 \begin{frame}
@@ -96,7 +96,7 @@
 
 % Uncomment these lines for an automatically generated outline.
 %\begin{frame}{Outline}
-%  \tableofcontents
+%  \tableofcontentsB
 %\end{frame}
 
 \section{Introduction}
@@ -162,9 +162,9 @@ To understand a space $X$, we use some homotopy invariants:
     \pause
   \item Chose a base point $x\in X$, Let $ \mathrm{Map}_*(\mathbb{S}^1,X)  \in \mathrm{Space}$ be the space of loops in $X$ started from $x$. Here $\mathrm{Map}_*$ is the space of pointed continue maps, the continue structure comes from deform maps. 
     \pause
-  \item $ \pi_1(X,x) := \pi_0\mathrm{Map}_*(\mathbb{S}^1,X) \in \mathrm{Group}$, how many loops in $X$ up to deformation.
+  \item $ \pi_1(X,x) := \pi_0\mathrm{Map}_*(\mathbb{S}^1,X) \in \mathrm{Group}$, how many loops in $X$ up to deformation. This is fundamental group.
     \pause
-  \item $i>1, \pi_i(X,x) := \pi_0\mathrm{Map}_*(\mathbb{S}^i,X)\cong \pi_0\mathrm{Map}_*(\mathbb{S}^1,\mathrm{Map}_*(\mathbb{S}^{i-1},X)) \in \mathrm{Abel}$
+  \item $i>1, \pi_i(X,x) := \pi_0\mathrm{Map}_*(\mathbb{S}^i,X)\cong \pi_0\mathrm{Map}_*(\mathbb{S}^1,\mathrm{Map}_*(\mathbb{S}^{i-1},X)) \in \mathrm{Abel}$. This is homotopy group.
 \end{itemize}
 \pause
 Let us study the cases $X=\mathbb{S}^n$.
@@ -174,7 +174,7 @@ Let us study the cases $X=\mathbb{S}^n$.
 \begin{itemize}
   \item For $i<n$, $\pi_i(\mathbb{S}^n)=\{ 0 \}$, where $0: \mathbb{S}^i\to * \xrightarrow{\mathrm{base}} \mathbb{S}^n$.
     \pause
-  \item For $\pi_n(\mathbb{S}^n)$, we consider the space $\mathrm{End}_*(\mathbb{S}^n):=\mathrm{Map}_*(\mathbb{S}^n,\mathbb{S}^n)$.
+  \item For $\pi_n(\mathbb{S}^n)$, let's consider the space $\mathrm{End}_*(\mathbb{S}^n):=\mathrm{Map}_*(\mathbb{S}^n,\mathbb{S}^n)$.
 \end{itemize}
 \pause
 
@@ -498,7 +498,7 @@ But what is $K_i(\mathrm{FinSet})$ for $i>0$ ?
 \pause
 \begin{itemize}
   \item $\pi_0(F)= \mathrm{FinSet}_{/\cong} \cong \mathbb{N} $.
-  \item $\pi_1(F,x) = \mathrm{S}_{|x|}$ the permutation group. 
+  \item $\pi_1(F,x) = \mathrm{S}_{|x|}$, the permutation group. 
   \item $\pi_i(F,x) = \{0\}$ for $i>1$ (one can never deform an isomorphism of set to another). 
 
 \end{itemize}
