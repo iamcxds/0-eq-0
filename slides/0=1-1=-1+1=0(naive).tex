@@ -84,7 +84,7 @@
 
 
 \title{\texorpdfstring{$0=\textcolor{red}{1}\textcolor{blue}{ -1 }=\textcolor{blue}{ -1 }+\textcolor{red}{1}=0$}{0=1-1=-1+1=0}}
-\subtitle{From Elementary Arithmetic to \\ Intrinsic Skein-Lasagna}
+\subtitle{From Elementary School to Higher Algebras}
 \author{Keyao Peng}
 \institute{Université de Bourgogne}
 \date{}
@@ -515,7 +515,7 @@ We can define natural number $\mathbb{N}$ as isomorphic classes of finite sets.
 How to define integral number $\mathbb{Z}$ with finite sets? 
 
 \pause
-We use the \textbf{Grothendieck group} $K_0(\mathrm{FinSet})$ :
+We use the \textbf{Grothendieck group} $K_0(\mathrm{FinSet})$ (we can think finite set as $\mathbb{F}_1 \text{-}\mathrm{mod}$):
 \[
   K_0(\mathrm{FinSet}) = \{ (X,Y)\in (\mathrm{FinSet}_{/\cong})^2   \} / \{ (X \sqcup Z , Y \sqcup Z) \sim (X,Y)\}
 \]
@@ -752,26 +752,10 @@ But what is $K_i(\mathrm{FinSet})$ for $i>0$ ?
   \end{itemize}
   \pause
   \begin{block}{Answer}
-    We can prove $0=0$ non-trivially with $h:0=1-1=-1+1=0$ !
+    We can prove $0=0$ non-trivially with $h:0=1-1=-1+1=0$!
   \end{block}
 \end{frame}
   
-\begin{frame}{Algebraic K-groups of a field}
-  Let $k$ be a field, we can follow the same construction for finite dimensional $k$ vector space. Let $V_k=\mathrm{FinVect}_k^{\cong}$, we define \textbf{Algebraic K-groups} of $k$ as $ K_i(k)= \pi_i K(V_k)$.
-
-(Notice that we can think finite sets as $\mathbb{F}_1$ vector spaces)
-
-\pause
-Algebraic K-groups are important invariants with connections to geometry, topology, ring theory, and number theory, but are notoriously difficult to compute.
-\pause
-\begin{itemize}
-  \item $K_0(k)=\mathbb{Z}$
-  \item $K_1(k)=k^{\times}$
-  \item $K_2(k)=k^{\times}\otimes_{\mathbb{Z}} k^{\times}/ \langle x\otimes (1-x): x\in k\setminus \{0,1\} \rangle$
-    \pause
-  \item $K_3(k)=???$
-\end{itemize}
-\end{frame}
 \begin{frame}{What's more?}
   But what is the connection between these two topics?
   \pause
@@ -847,15 +831,11 @@ Algebraic K-groups are important invariants with connections to geometry, topolo
 
 \end{tikzpicture}
   \end{center}
-  \pause
-  \begin{block}{New Question}
-    Can we find geometric internation for general K-groups $K_i(k)$ ?  
- \end{block} 
+  
 \end{frame}
-
 \begin{frame}{What about cobordism?}
 
-If we put the movement in 3D space, we get a circle:
+If we put the movement in 3D space:
 \begin{columns}
   
 \column{0.5\linewidth}
@@ -985,345 +965,6 @@ This provides a framed circle, meaning an embedding $\mathbb{S}^1 \hookrightarro
 Therefore, this framed circle is non-trivial and is the generator of $\Omega^{fr}_1$.
 
 \end{columns}
-\end{frame}
-
-\begin{frame}{Intrinsic Skein-Lasagna}
-  A $n$-\textbf{treefold} is a space generally locally homeomorphic to $T\times \mathbb{R}^{n-1}$, where $T$ is a tree. \pause
-  Give a symmetric monoidal category $(\mathcal{C},\otimes)$, define an $n$-$(\mathcal{C},\otimes)$-\textbf{Lasagna} $L$ as a framed $n$-treeifold $\mathcal{T}$ with a stratification $ \mathcal{S}$ and the strata are marked compatibly with category $\mathcal{C}$:
-  \pause
-  \begin{itemize}
-    \item $0$-codimensional strata are marked with objects; For $i>0$, $i$-codimensional strata are marked with $i$-morphism,
-    \item At the branches of treefold marked with the monoidal product $\otimes$.
-  \end{itemize}
-
-  \begin{example}
-   \begin{center}
-    
-
-
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,231); %set diagram left start at 0, and has height of 231
-
-%Shape: Parallelogram [id:dp6996631170546035] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 126; green, 211; blue, 33 }  ,fill opacity=1 ] (360,140) -- (408.97,140) -- (420,170) -- (371.03,170) -- cycle ;
-%Shape: Parallelogram [id:dp09581341430720358] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 144; green, 19; blue, 254 }  ,fill opacity=1 ] (381,100) -- (430,100) -- (409,140) -- (360,140) -- cycle ;
-%Shape: Parallelogram [id:dp3501837238507518] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ] (360.4,140) -- (409,140) -- (357.6,170) -- (309,170) -- cycle ;
-%Straight Lines [id:da25191378714933477] 
-\draw [color={rgb, 255:red, 74; green, 144; blue, 226 }  ,draw opacity=1 ]   (130,120) -- (180,120) ;
-%Straight Lines [id:da12977467382050778] 
-\draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (80.5,120.05) -- (130,120) ;
-%Flowchart: Connector [id:dp8476595101018158] 
-\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (131.5,120) .. controls (131.5,119.17) and (130.83,118.5) .. (130,118.5) .. controls (129.17,118.5) and (128.5,119.17) .. (128.5,120) .. controls (128.5,120.83) and (129.17,121.5) .. (130,121.5) .. controls (130.83,121.5) and (131.5,120.83) .. (131.5,120) -- cycle ;
-%Shape: Polygon [id:ds023537366445850916] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 208; green, 2; blue, 27 }  ,fill opacity=1 ] (230,90) -- (260,90) -- (260,120) -- (230,150) -- cycle ;
-%Shape: Polygon [id:ds02842235664302828] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 126; green, 211; blue, 33 }  ,fill opacity=1 ] (260,90) -- (290,90) -- (290,150) -- (260,120) -- cycle ;
-%Shape: Triangle [id:dp940170604210908] 
-\draw  [draw opacity=0][fill={rgb, 255:red, 248; green, 231; blue, 28 }  ,fill opacity=1 ] (259.6,120) -- (290,150) -- (230,150) -- cycle ;
-%Straight Lines [id:da7919368892196721] 
-\draw    (260,90) -- (260,120) ;
-%Straight Lines [id:da7442600311070939] 
-\draw    (260,120) -- (230,150) ;
-%Straight Lines [id:da8091223162735048] 
-\draw    (290,150) -- (260,120) ;
-%Straight Lines [id:da35128029961261864] 
-\draw    (258.94,178.94) -- (263.99,173.89)(261.06,181.06) -- (266.11,176.01) ;
-\draw [shift={(270,170)}, rotate = 135] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (7.65,-3.43) .. controls (4.86,-1.61) and (2.31,-0.47) .. (0,0) .. controls (2.31,0.47) and (4.86,1.61) .. (7.65,3.43)   ;
-
-% Text Node
-\draw (124.44,94.82) node [anchor=north west][inner sep=0.75pt]    {$f$};
-% Text Node
-\draw (87.11,95.51) node [anchor=north west][inner sep=0.75pt]    {$A$};
-% Text Node
-\draw (159.78,95.29) node [anchor=north west][inner sep=0.75pt]    {$B$};
-% Text Node
-\draw (100.24,134.42) node [anchor=north west][inner sep=0.75pt]    {$A\ \xrightarrow{f} B$};
-% Text Node
-\draw (235,102.4) node [anchor=north west][inner sep=0.75pt]    {$A$};
-% Text Node
-\draw (271,102.4) node [anchor=north west][inner sep=0.75pt]    {$B$};
-% Text Node
-\draw (251,132.4) node [anchor=north west][inner sep=0.75pt]    {$C$};
-% Text Node
-\draw (260,92.4) node [anchor=north west][inner sep=0.75pt]    {$f$};
-% Text Node
-\draw (232,123.4) node [anchor=north west][inner sep=0.75pt]    {$g$};
-% Text Node
-\draw (277,122.4) node [anchor=north west][inner sep=0.75pt]    {$h$};
-% Text Node
-\draw (233,150.4) node [anchor=north west][inner sep=0.75pt]    {$A\ \xrightarrow{f} B$};
-% Text Node
-\draw (246.29,170.31) node [anchor=north west][inner sep=0.75pt]  [rotate=-45]  {$\xrightarrow[g]{}$};
-% Text Node
-\draw (256,182.4) node [anchor=north west][inner sep=0.75pt]    {$C$};
-% Text Node
-\draw (265.65,183.56) node [anchor=north west][inner sep=0.75pt]  [rotate=-305]  {$\xrightarrow[h]{}$};
-% Text Node
-\draw (351,142.4) node [anchor=north west][inner sep=0.75pt]    {$A$};
-% Text Node
-\draw (391,152.4) node [anchor=north west][inner sep=0.75pt]    {$B$};
-% Text Node
-\draw (371,112.4) node [anchor=north west][inner sep=0.75pt]    {$A\otimes B$};
-
-
-\end{tikzpicture}
-   \end{center} 
-  \end{example}
-  \end{frame}
-  \begin{frame}
-
-  \begin{block}{Relation with "Skein-Lasagna module"}
-    
-    We do not ask for an ambient space $X$ where lasagna embeds (or think $X=\mathbb{R}^\infty$). This means we study the intrinsic geometry of Lasagna itself.
- \end{block} 
- \pause
-
-    We can think a Lasagna $L$ as a string diagram of $\mathcal{C}$ drawing on $ \mathcal{T}$, or another way to say $L\in \int_{\mathcal{T}} (\mathcal{C},\otimes)$.
-
-    \begin{block}{Cobordism of Lasagna}
-    
-    As one expects, we can define the cobordism relation between $L_1,L_2$, if there is a Lasagna $W$ with boundary such that $\partial W= L_1 \sqcup -L_2 $. Finally, we define the $n$-th $(\mathcal{C},\otimes)$-\textbf{cobordism group} $\Omega^{\mathcal{C},\otimes}_n$ to be the abelian group generated by $n$-Lasagna modulo cobordism relations.
-
-  \end{block}
-
-\end{frame}
-
-\begin{frame}{ $(V_k,\oplus)$-Cobodrism Group}
-  As an example $\Omega^{V_k,\oplus}_n$, where $V_k=\mathrm{FinVect}^{\cong}_k$ is the subcategory of finite-dimensional vector space where the morphisms are all isomorphisms.
-  \pause
-\begin{itemize}
-  \item It is clear $ \Omega^{V_k,\oplus}_0\cong \mathbb{Z}$ is classfied dimension.
-  \pause
-
-\item  $ \Omega^{V_k,\oplus}_1$ is generated by circle $L_V(f)$ marked with vector spaces $V$ and matrix $ f\in \mathrm{GL}_V(k)$. And by adding identity matrices, we find we have a homomorphism $L:\mathrm{GL}_{\infty}(k) \twoheadrightarrow \Omega^{V_k,\oplus}_1$.
-
-\end{itemize}
-  \begin{center}
-    
-
-
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,156); %set diagram left start at 0, and has height of 156
-
-%Shape: Arc [id:dp1665008079211352] 
-\draw  [draw opacity=0][dash pattern={on 4.5pt off 4.5pt}] (184.19,96.87) .. controls (184.02,96.9) and (183.84,96.91) .. (183.67,96.91) .. controls (178.56,96.91) and (174.42,83.48) .. (174.42,66.91) .. controls (174.42,50.34) and (178.56,36.91) .. (183.67,36.91) .. controls (183.93,36.91) and (184.19,36.95) .. (184.45,37.02) -- (183.67,66.91) -- cycle ; \draw  [dash pattern={on 4.5pt off 4.5pt}] (184.19,96.87) .. controls (184.02,96.9) and (183.84,96.91) .. (183.67,96.91) .. controls (178.56,96.91) and (174.42,83.48) .. (174.42,66.91) .. controls (174.42,50.34) and (178.56,36.91) .. (183.67,36.91) .. controls (183.93,36.91) and (184.19,36.95) .. (184.45,37.02) ;  
-%Shape: Circle [id:dp34434620773787505] 
-\draw   (22.67,66.67) .. controls (22.67,52.86) and (33.86,41.67) .. (47.67,41.67) .. controls (61.47,41.67) and (72.67,52.86) .. (72.67,66.67) .. controls (72.67,80.47) and (61.47,91.67) .. (47.67,91.67) .. controls (33.86,91.67) and (22.67,80.47) .. (22.67,66.67) -- cycle ;
-%Shape: Circle [id:dp5342684802497282] 
-\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (32.55,44.87) .. controls (32.55,43.36) and (33.76,42.15) .. (35.27,42.15) .. controls (36.77,42.15) and (37.99,43.36) .. (37.99,44.87) .. controls (37.99,46.37) and (36.77,47.59) .. (35.27,47.59) .. controls (33.76,47.59) and (32.55,46.37) .. (32.55,44.87) -- cycle ;
-%Shape: Can [id:dp8303673337694337] 
-\draw   (132.19,36.87) -- (184.19,36.87) .. controls (189.16,36.87) and (193.19,50.3) .. (193.19,66.87) .. controls (193.19,83.44) and (189.16,96.87) .. (184.19,96.87) -- (132.19,96.87) .. controls (127.22,96.87) and (123.19,83.44) .. (123.19,66.87) .. controls (123.19,50.3) and (127.22,36.87) .. (132.19,36.87) .. controls (137.16,36.87) and (141.19,50.3) .. (141.19,66.87) .. controls (141.19,83.44) and (137.16,96.87) .. (132.19,96.87) ;
-%Shape: Circle [id:dp8607981738398717] 
-\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (44.95,41.67) .. controls (44.95,40.16) and (46.16,38.95) .. (47.67,38.95) .. controls (49.17,38.95) and (50.39,40.16) .. (50.39,41.67) .. controls (50.39,43.17) and (49.17,44.39) .. (47.67,44.39) .. controls (46.16,44.39) and (44.95,43.17) .. (44.95,41.67) -- cycle ;
-%Curve Lines [id:da6568565725311016] 
-\draw    (139.23,50.75) .. controls (150.27,47.83) and (166.03,53.55) .. (170.43,63.55) ;
-%Curve Lines [id:da3461117691560027] 
-\draw    (141.63,75.55) .. controls (151.63,76.11) and (167.23,71.31) .. (170.43,63.55) ;
-%Straight Lines [id:da4929342704626295] 
-\draw    (170.43,63.55) -- (193.63,63.31) ;
-%Shape: Circle [id:dp6393608623461394] 
-\draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (58.15,45.27) .. controls (58.15,43.76) and (59.36,42.55) .. (60.87,42.55) .. controls (62.37,42.55) and (63.59,43.76) .. (63.59,45.27) .. controls (63.59,46.77) and (62.37,47.99) .. (60.87,47.99) .. controls (59.36,47.99) and (58.15,46.77) .. (58.15,45.27) -- cycle ;
-%Shape: Can [id:dp9029530593575552] 
-\draw   (238.4,40.55) -- (277.95,40.55) .. controls (283.14,40.55) and (287.35,53.98) .. (287.35,70.55) .. controls (287.35,87.12) and (283.14,100.55) .. (277.95,100.55) -- (238.4,100.55) .. controls (233.21,100.55) and (229,87.12) .. (229,70.55) .. controls (229,53.98) and (233.21,40.55) .. (238.4,40.55) .. controls (243.59,40.55) and (247.8,53.98) .. (247.8,70.55) .. controls (247.8,87.12) and (243.59,100.55) .. (238.4,100.55) ;
-%Straight Lines [id:da8838817730310911] 
-\draw    (247.8,65.2) -- (288.08,65.22) ;
-%Straight Lines [id:da9137768544706646] 
-\draw    (279.24,40.55) -- (347.91,31.85) ;
-%Straight Lines [id:da6090343245510165] 
-\draw    (279.24,100.55) -- (345.08,112.13) ;
-%Straight Lines [id:da07471767495563264] 
-\draw  [dash pattern={on 2.25pt off 1.5pt}]  (279.24,40.55) -- (310.53,55.1) ;
-%Straight Lines [id:da7591341693417983] 
-\draw  [dash pattern={on 2.25pt off 1.5pt}]  (279.24,100.55) -- (309.2,88.1) ;
-%Shape: Arc [id:dp07118059349492079] 
-\draw  [draw opacity=0][dash pattern={on 4.5pt off 4.5pt}] (310.53,55.1) .. controls (312.72,56.31) and (314.4,63.23) .. (314.4,71.58) .. controls (314.4,80.78) and (312.36,88.25) .. (309.85,88.25) .. controls (307.33,88.25) and (305.29,80.78) .. (305.29,71.58) .. controls (305.29,62.37) and (307.33,54.91) .. (309.85,54.91) .. controls (309.93,54.91) and (310,54.92) .. (310.08,54.93) -- (309.85,71.58) -- cycle ; \draw  [dash pattern={on 4.5pt off 4.5pt}] (310.53,55.1) .. controls (312.72,56.31) and (314.4,63.23) .. (314.4,71.58) .. controls (314.4,80.78) and (312.36,88.25) .. (309.85,88.25) .. controls (307.33,88.25) and (305.29,80.78) .. (305.29,71.58) .. controls (305.29,62.37) and (307.33,54.91) .. (309.85,54.91) .. controls (309.93,54.91) and (310,54.92) .. (310.08,54.93) ;  
-%Shape: Arc [id:dp9136640651819464] 
-\draw  [draw opacity=0][dash pattern={on 4.5pt off 4.5pt}] (310.08,54.93) .. controls (318.98,55.28) and (326.08,62.38) .. (326.08,71.09) .. controls (326.08,80.02) and (318.62,87.26) .. (309.41,87.26) .. controls (309.23,87.26) and (309.06,87.26) .. (308.88,87.25) -- (309.41,71.09) -- cycle ; \draw  [dash pattern={on 4.5pt off 4.5pt}] (310.08,54.93) .. controls (318.98,55.28) and (326.08,62.38) .. (326.08,71.09) .. controls (326.08,80.02) and (318.62,87.26) .. (309.41,87.26) .. controls (309.23,87.26) and (309.06,87.26) .. (308.88,87.25) ;  
-%Shape: Arc [id:dp2315394282297093] 
-\draw  [draw opacity=0] (347.91,31.85) .. controls (355.51,33.18) and (361.53,50.7) .. (361.53,72.12) .. controls (361.53,94.4) and (355.01,112.47) .. (346.97,112.47) .. controls (346.33,112.47) and (345.7,112.35) .. (345.08,112.13) -- (346.97,72.12) -- cycle ; \draw   (347.91,31.85) .. controls (355.51,33.18) and (361.53,50.7) .. (361.53,72.12) .. controls (361.53,94.4) and (355.01,112.47) .. (346.97,112.47) .. controls (346.33,112.47) and (345.7,112.35) .. (345.08,112.13) ;  
-%Straight Lines [id:da7482585057316815] 
-\draw    (288.08,65.22) -- (361.4,58.4) ;
-%Shape: Arc [id:dp3266026120120239] 
-\draw  [draw opacity=0][dash pattern={on 4.5pt off 4.5pt}] (345.08,112.13) .. controls (338,109.39) and (332.55,92.54) .. (332.55,72.17) .. controls (332.55,49.88) and (339.07,31.82) .. (347.11,31.82) .. controls (347.54,31.82) and (347.96,31.87) .. (348.38,31.97) -- (347.11,72.17) -- cycle ; \draw  [dash pattern={on 4.5pt off 4.5pt}] (345.08,112.13) .. controls (338,109.39) and (332.55,92.54) .. (332.55,72.17) .. controls (332.55,49.88) and (339.07,31.82) .. (347.11,31.82) .. controls (347.54,31.82) and (347.96,31.87) .. (348.38,31.97) ;  
-%Shape: Arc [id:dp1884790202794796] 
-\draw  [draw opacity=0][dash pattern={on 4.5pt off 4.5pt}] (279.24,100.55) .. controls (279.07,100.58) and (278.9,100.6) .. (278.72,100.6) .. controls (273.62,100.6) and (269.47,87.16) .. (269.47,70.6) .. controls (269.47,54.03) and (273.62,40.6) .. (278.72,40.6) .. controls (278.99,40.6) and (279.25,40.63) .. (279.5,40.7) -- (278.72,70.6) -- cycle ; \draw  [dash pattern={on 4.5pt off 4.5pt}] (279.24,100.55) .. controls (279.07,100.58) and (278.9,100.6) .. (278.72,100.6) .. controls (273.62,100.6) and (269.47,87.16) .. (269.47,70.6) .. controls (269.47,54.03) and (273.62,40.6) .. (278.72,40.6) .. controls (278.99,40.6) and (279.25,40.63) .. (279.5,40.7) ;  
-
-% Text Node
-\draw (39.52,92) node [anchor=north west][inner sep=0.75pt]    {$V$};
-% Text Node
-\draw (31.92,19.4) node [anchor=north west][inner sep=0.75pt]    {$f$};
-% Text Node
-\draw (47.92,15.8) node [anchor=north west][inner sep=0.75pt]    {$g$};
-% Text Node
-\draw (126.29,43.12) node [anchor=north west][inner sep=0.75pt]    {$f$};
-% Text Node
-\draw (58.72,31.4) node [anchor=north west][inner sep=0.75pt]    {$\cdots $};
-% Text Node
-\draw (127.79,64.07) node [anchor=north west][inner sep=0.75pt]    {$g$};
-% Text Node
-\draw (193.79,54.07) node [anchor=north west][inner sep=0.75pt]    {$fg$};
-% Text Node
-\draw (230.47,48.8) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$f\oplus \mathrm{id}$};
-% Text Node
-\draw (246.87,83.13) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$V\oplus W$};
-% Text Node
-\draw (291.47,66.47) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$W$};
-% Text Node
-\draw (322.13,97.47) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$V$};
-% Text Node
-\draw (370.47,47.8) node [anchor=north west][inner sep=0.75pt]  [font=\scriptsize]  {$f$};
-% Text Node
-\draw (15.2,110.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$L_{V}( f,g,\dotsc )$};
-% Text Node
-\draw (104.4,108.8) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$L_{V}( f,g) \sim L_{V}( fg)$};
-% Text Node
-\draw (239.2,122) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$L_{V\oplus W}( f\oplus \mathrm{id}) \sim L_{V}( f)$};
-
-
-\end{tikzpicture}
-  \end{center}
-    
-  \end{frame}
-
-\begin{frame}
- We have one more relation given by surfaces: 
-\begin{center}
-  
-
-
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,204); %set diagram left start at 0, and has height of 204
-
-%Curve Lines [id:da25839696198345463] 
-\draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ] [dash pattern={on 4.5pt off 4.5pt}]  (131.1,152.57) .. controls (141.83,153.46) and (159.73,123.81) .. (159.38,113.54) ;
-%Curve Lines [id:da7756479931504024] 
-\draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (117.97,94.1) .. controls (136.03,92.77) and (156.35,98.53) .. (159.38,113.54) ;
-%Shape: Arc [id:dp2958131410181578] 
-\draw  [draw opacity=0] (101.26,73.56) .. controls (117.45,68.03) and (137.51,64.76) .. (159.22,64.76) .. controls (213,64.76) and (256.6,84.82) .. (256.6,109.57) .. controls (256.6,134.32) and (213,154.38) .. (159.22,154.38) .. controls (138.42,154.38) and (119.15,151.38) .. (103.33,146.27) -- (159.22,109.57) -- cycle ; \draw   (101.26,73.56) .. controls (117.45,68.03) and (137.51,64.76) .. (159.22,64.76) .. controls (213,64.76) and (256.6,84.82) .. (256.6,109.57) .. controls (256.6,134.32) and (213,154.38) .. (159.22,154.38) .. controls (138.42,154.38) and (119.15,151.38) .. (103.33,146.27) ;  
-%Shape: Arc [id:dp1241871896282788] 
-\draw  [draw opacity=0] (208.69,107.97) .. controls (201.16,114.54) and (190.98,118.57) .. (179.78,118.57) .. controls (169.05,118.57) and (159.26,114.87) .. (151.84,108.79) -- (179.78,79.99) -- cycle ; \draw   (208.69,107.97) .. controls (201.16,114.54) and (190.98,118.57) .. (179.78,118.57) .. controls (169.05,118.57) and (159.26,114.87) .. (151.84,108.79) ;  
-%Shape: Arc [id:dp922346472232386] 
-\draw  [draw opacity=0] (162.61,111.95) .. controls (167.6,109.78) and (173.29,108.55) .. (179.33,108.55) .. controls (185.92,108.55) and (192.1,110.01) .. (197.39,112.57) -- (179.33,137.55) -- cycle ; \draw   (162.61,111.95) .. controls (167.6,109.78) and (173.29,108.55) .. (179.33,108.55) .. controls (185.92,108.55) and (192.1,110.01) .. (197.39,112.57) ;  
-%Curve Lines [id:da31153544818714807] 
-\draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (111.92,139.85) .. controls (116.43,146.36) and (122.64,152.13) .. (131.1,152.57) ;
-%Shape: Arc [id:dp40382863157541093] 
-\draw  [draw opacity=0] (110.7,77.02) .. controls (123.53,74.09) and (139.12,72.37) .. (155.93,72.37) .. controls (199.8,72.37) and (235.35,84.08) .. (235.35,98.53) .. controls (235.35,112.99) and (199.8,124.7) .. (155.93,124.7) .. controls (142.52,124.7) and (129.89,123.61) .. (118.81,121.67) -- (155.93,98.53) -- cycle ; \draw  [color={rgb, 255:red, 126; green, 211; blue, 33 }  ,draw opacity=1 ] (110.7,77.02) .. controls (123.53,74.09) and (139.12,72.37) .. (155.93,72.37) .. controls (199.8,72.37) and (235.35,84.08) .. (235.35,98.53) .. controls (235.35,112.99) and (199.8,124.7) .. (155.93,124.7) .. controls (142.52,124.7) and (129.89,123.61) .. (118.81,121.67) ;  
-%Shape: Ellipse [id:dp34003597646174155] 
-\draw   (83.55,109.86) .. controls (83.55,90.03) and (91.73,73.95) .. (101.81,73.95) .. controls (111.9,73.95) and (120.07,90.03) .. (120.07,109.86) .. controls (120.07,129.69) and (111.9,145.77) .. (101.81,145.77) .. controls (91.73,145.77) and (83.55,129.69) .. (83.55,109.86) -- cycle ;
-
-% Text Node
-\draw (96.41,77.3) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$f$};
-% Text Node
-\draw (104.88,89.72) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$g$};
-% Text Node
-\draw (97.98,110.3) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$f^{-1}$};
-% Text Node
-\draw (92.41,127.58) node [anchor=north west][inner sep=0.75pt]  [font=\footnotesize]  {$g^{-1}$};
-% Text Node
-\draw (127,168.8) node [anchor=north west][inner sep=0.75pt]    {$L([ f,g]) \sim 0$};
-
-
-\end{tikzpicture}
-\end{center}
-\pause
-Notice that $k^{\times}\cong \mathrm{GL}_{\infty}(k)/[\mathrm{GL}_{\infty}(k),\mathrm{GL}_{\infty}(k)]$. In fact, one can show the induced homomorphism $ L:k^{\times}  \xrightarrow{\cong} \Omega^{V_k,\oplus}_1$ is isomorphism. And the lasagna induced by Hopf map $H$ is given by $L(-1)$.
-
-\end{frame}
-\begin{frame}{Generalized Pontryagin–Thom Isomorphism}
-  
-Recall that $K_0(k)=\mathbb{Z},K_1(k)=k^{\times}$. This is not just a coincidence:
-\begin{block}{Generalized Pontryagin–Thom Isomorphism}
-
-  We have the isomorphism
-  \[
-    K_n(k) \xrightarrow{\cong} \Omega^{V_k,\oplus}_n
-  \]
-  
-\end{block}
-This gives us an abstract isomorphism, which indicates we can view Lasagna as elements in $K$-groups. So what about $n=2$ ?
-
-\end{frame}
-\begin{frame}{$\Omega^{V_k,\oplus}_2$ and $K_2(k)$}
-
-  For matrices $f,g\in \mathrm{GL}(k)$ such that $[f,g]=1$, one can define following $2$-Lasagna $C(f,g)$:
-
- \begin{center}
-  
-
-
-\tikzset{every picture/.style={line width=0.75pt}} %set default line width to 0.75pt        
-
-\begin{tikzpicture}[x=0.75pt,y=0.75pt,yscale=-1,xscale=1]
-%uncomment if require: \path (0,300); %set diagram left start at 0, and has height of 300
-
-%Shape: Arc [id:dp08875951055434284] 
-\draw  [draw opacity=0] (199.81,157.95) .. controls (193.54,166.8) and (184.07,172.43) .. (173.48,172.43) .. controls (163.27,172.43) and (154.1,167.19) .. (147.84,158.89) -- (173.48,132.46) -- cycle ; \draw   (199.81,157.95) .. controls (193.54,166.8) and (184.07,172.43) .. (173.48,172.43) .. controls (163.27,172.43) and (154.1,167.19) .. (147.84,158.89) ;  
-%Shape: Arc [id:dp37364731845395227] 
-\draw  [draw opacity=0] (156.87,167.22) .. controls (161.5,163.95) and (167.09,162.05) .. (173.11,162.05) .. controls (179.63,162.05) and (185.64,164.29) .. (190.48,168.06) -- (173.11,192.09) -- cycle ; \draw   (156.87,167.22) .. controls (161.5,163.95) and (167.09,162.05) .. (173.11,162.05) .. controls (179.63,162.05) and (185.64,164.29) .. (190.48,168.06) ;  
-%Shape: Ellipse [id:dp23902327909274745] 
-\draw   (93.42,166.15) .. controls (93.42,140.39) and (128.39,119.52) .. (171.52,119.52) .. controls (214.66,119.52) and (249.62,140.39) .. (249.62,166.15) .. controls (249.62,191.9) and (214.66,212.78) .. (171.52,212.78) .. controls (128.39,212.78) and (93.42,191.9) .. (93.42,166.15) -- cycle ;
-%Shape: Ellipse [id:dp08445288748513025] 
-\draw  [color={rgb, 255:red, 184; green, 233; blue, 134 }  ,draw opacity=1 ] (114.43,161.76) .. controls (114.43,147.23) and (140.45,135.46) .. (172.55,135.46) .. controls (204.65,135.46) and (230.66,147.23) .. (230.66,161.76) .. controls (230.66,176.28) and (204.65,188.06) .. (172.55,188.06) .. controls (140.45,188.06) and (114.43,176.28) .. (114.43,161.76) -- cycle ;
-%Shape: Arc [id:dp6523650578304243] 
-\draw  [draw opacity=0] (152.3,209.95) .. controls (146.23,208.2) and (141.61,199.29) .. (141.61,188.55) .. controls (141.61,176.56) and (147.37,166.84) .. (154.47,166.84) .. controls (155.29,166.84) and (156.1,166.97) .. (156.87,167.22) -- (154.47,188.55) -- cycle ; \draw  [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ] (152.3,209.95) .. controls (146.23,208.2) and (141.61,199.29) .. (141.61,188.55) .. controls (141.61,176.56) and (147.37,166.84) .. (154.47,166.84) .. controls (155.29,166.84) and (156.1,166.97) .. (156.87,167.22) ;  
-%Shape: Arc [id:dp03657090661410978] 
-\draw  [draw opacity=0][dash pattern={on 4.5pt off 4.5pt}] (163.47,173.03) .. controls (165.86,176.97) and (167.34,182.47) .. (167.34,188.55) .. controls (167.34,199.71) and (162.35,208.9) .. (155.93,210.12) -- (154.47,188.55) -- cycle ; \draw  [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ][dash pattern={on 4.5pt off 4.5pt}] (163.47,173.03) .. controls (165.86,176.97) and (167.34,182.47) .. (167.34,188.55) .. controls (167.34,199.71) and (162.35,208.9) .. (155.93,210.12) ;  
-%Curve Lines [id:da7785889566235382] 
-\draw    (155.57,193.65) .. controls (194.23,221.39) and (241.59,210.71) .. (283.69,183.6) ;
-\draw [shift={(284.97,182.78)}, rotate = 146.84] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-%Straight Lines [id:da3530716693077939] 
-\draw    (295.44,149.7) -- (296.29,175.27) ;
-\draw [shift={(296.36,177.26)}, rotate = 268.09] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.96) .. controls (2.78,-0.92) and (1.32,-0.27) .. (0,0) .. controls (1.32,0.27) and (2.78,0.92) .. (4.37,1.96)   ;
-%Straight Lines [id:da24373915684523606] 
-\draw    (350.57,149.7) -- (350.57,175.26) ;
-\draw [shift={(350.57,177.26)}, rotate = 270] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.96) .. controls (2.78,-0.92) and (1.32,-0.27) .. (0,0) .. controls (1.32,0.27) and (2.78,0.92) .. (4.37,1.96)   ;
-%Straight Lines [id:da5911987331662195] 
-\draw    (309.22,191.05) -- (334.79,191.05) ;
-\draw [shift={(336.79,191.05)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.96) .. controls (2.78,-0.92) and (1.32,-0.27) .. (0,0) .. controls (1.32,0.27) and (2.78,0.92) .. (4.37,1.96)   ;
-%Straight Lines [id:da39984972337631364] 
-\draw    (309.22,135.92) -- (334.79,135.92) ;
-\draw [shift={(336.79,135.92)}, rotate = 180] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (4.37,-1.96) .. controls (2.78,-0.92) and (1.32,-0.27) .. (0,0) .. controls (1.32,0.27) and (2.78,0.92) .. (4.37,1.96)   ;
-%Straight Lines [id:da48473603554916134] 
-\draw    (330.1,156.66) -- (316.32,172.28)(327.85,154.68) -- (314.07,170.3) ;
-%Shape: Ellipse [id:dp9510867881111674] 
-\draw  [dash pattern={on 0.84pt off 2.51pt}] (128.83,183.93) .. controls (128.83,175.85) and (135.38,169.3) .. (143.45,169.3) .. controls (151.53,169.3) and (158.08,175.85) .. (158.08,183.93) .. controls (158.08,192) and (151.53,198.55) .. (143.45,198.55) .. controls (135.38,198.55) and (128.83,192) .. (128.83,183.93) -- cycle ;
-
-% Text Node
-\draw (103.39,149.45) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$f$};
-% Text Node
-\draw (134.32,209.89) node [anchor=north west][inner sep=0.75pt]  [font=\normalsize]  {$g$};
-% Text Node
-\draw (316.67,117.11) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$f$};
-% Text Node
-\draw (315.51,193.37) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$f$};
-% Text Node
-\draw (290.42,131.65) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$V$};
-% Text Node
-\draw (342.18,130.43) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$V$};
-% Text Node
-\draw (291.34,184.95) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$V$};
-% Text Node
-\draw (344.33,186.78) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$V$};
-% Text Node
-\draw (280.38,154.69) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$g$};
-% Text Node
-\draw (357.25,155.91) node [anchor=north west][inner sep=0.75pt]  [font=\small]  {$g$};
-% Text Node
-\draw (37,172.4) node [anchor=north west][inner sep=0.75pt]    {$C( f,g)$};
-
-
-\end{tikzpicture}
- \end{center} 
- 
- Recall $K_2(k)= k^\times \otimes k^\times / \langle a \otimes 1-a \rangle$, which means we can find a $3$-Lasagna who bounds $C(a,1-a)$ !
 \end{frame}
 \begin{frame}{Thank you, hope you have got the brain upgrades!}
   
