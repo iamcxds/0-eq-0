@@ -1093,7 +1093,7 @@ Therefore, this framed circle is non-trivial and is the generator of $\Omega^{fr
 \end{frame}
 
 \begin{frame}{ $(V_k,\oplus)$-Cobodrism Group}
-  As an example $\Omega^{V_k,\oplus}_n$, where $V_k=\mathrm{FinVect}^{\cong}_k$ is the subcategory of finite-dimensional vector space where the morphisms are all isomorphisms.
+  As an example $\Omega^{V_k,\oplus}_n$, where $V_k=\mathrm{FinVect}^{\cong}_k$ is the subcategory of finite-dimensional vector space where the morphisms are all isomorphisms. In this case, we can think a lasagna as a treefold /manifold equips with a $k$-local system.
   \pause
 \begin{itemize}
   \item It is clear $ \Omega^{V_k,\oplus}_0\cong \mathbb{Z}$ is classfied dimension.
@@ -1240,6 +1240,7 @@ Notice that $k^{\times}\cong \mathrm{GL}_{\infty}(k)/[\mathrm{GL}_{\infty}(k),\m
 \begin{frame}{Generalized Pontryagin–Thom Isomorphism}
   
 Recall that $K_0(k)=\mathbb{Z},K_1(k)=k^{\times}$. This is not just a coincidence:
+\pause
 \begin{block}{Generalized Pontryagin–Thom Isomorphism (My claim)}
 
   For all $n\geq 0$, we have the isomorphism
@@ -1248,6 +1249,7 @@ Recall that $K_0(k)=\mathbb{Z},K_1(k)=k^{\times}$. This is not just a coincidenc
   \]
   
 \end{block}
+\pause
 This answers the new question, which indicates we can view lasagna as elements in $K$-groups, which provides a bridge from hard problems in algebra toward hard problems in geometric topology.
 
 So what does it tell us about $n=2$ ?
@@ -1325,9 +1327,11 @@ So what does it tell us about $n=2$ ?
 \end{tikzpicture}
  \end{center} 
  
- Recall $K_2(k)= k^\times \otimes k^\times / \langle a \otimes 1-a \rangle$, which means we can find a $3$-lasagna who bounds $C(a,1-a)$. In other word, we can encode prove/computation by a lasagna.
- 
-I don't have a lasagna bounds $C(a,1-a)$ for now, but I have an easier example.
+ \pause
+ Recall $K_2(k)= k^\times \otimes k^\times / \langle a \otimes 1-a \rangle$, which means we should find a $3$-lasagna called Ghys' lasagna who bounds $C(a,1-a)$. In other word, we can encode proof/computation by a lasagna.
+\pause 
+
+I don't have Ghys' lasagna for now (which has Heegaard genus less than 26), but I have an easier example.
 \end{frame}
 \begin{frame}{$3$-Lasagna bounds $C(e_{12}(a),e_{12}(b))$}
   For $i\neq j$, let elementary matrices $e_{ij}(a)$ to be
@@ -1338,6 +1342,7 @@ I don't have a lasagna bounds $C(a,1-a)$ for now, but I have an easier example.
       0, &\text{ otherwise.}
     \end{cases}
   \]
+  \pause
   Notice $ e_{ij}(a)^{-1}=e_{ij}(-a)$, and they satisfy the Steinberg relations:
   \[
     [e_{ij}(a),e_{kl}(b)]=\begin{cases}
@@ -1345,7 +1350,8 @@ I don't have a lasagna bounds $C(a,1-a)$ for now, but I have an easier example.
       \mathbf{1}, &\text{ otherwise. }\\
     \end{cases}
   \]
-  Using these relations and Hall-Witt identity, we have the following non-trivial prove of $[e_{12}(a),e_{12}(b)]=\mathbf{1}$:
+  \pause
+  Using these relations and Hall-Witt identity, we have the following non-trivial proof of $[e_{12}(a),e_{12}(b)]=\mathbf{1}$:
   {\small\begin{eqnarray*}
     &[e_{12}(a),e_{12}(b)]=[[e_{13}(a),e_{32}(1)],e_{12}(b)]\\
     &=[e_{32}(1),[e_{13}(-a),e_{12}(-b)]]^{e_{13}(a)}[e_{13}(a),[e_{32}(-1),e_{12}(-b)]]^{e_{32}(-1)}\\
@@ -1353,7 +1359,7 @@ I don't have a lasagna bounds $C(a,1-a)$ for now, but I have an easier example.
   \end{eqnarray*}}
 \end{frame}
 \begin{frame}
-  Following this blueprint, we have such handle decomposition to construct a lasagna: 
+  Following this blueprint, we have such Heegaard splitting to construct a lasagna: 
 \begin{center}
 
 
