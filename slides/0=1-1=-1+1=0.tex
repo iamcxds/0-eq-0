@@ -111,15 +111,15 @@
 \end{itemize}
 \pause
 
-But, what is an \textbf{equation}? 
+But what exactly is an \textbf{equation}? 
 
 \pause
-$A=B$ says $A$ \textbf{is} equal to $B$, \textbf{how} they are equal depends on the \textit{proof}.
+The statement $A=B$ says that $A$ \textbf{is} equal to $B$, but \textbf{how} they are equal depends on the \textit{proof}.
 
 \pause
 
 \begin{block}{Question}
-  Can you prove $0=0$, non-trivially?
+  Can you prove $0=0$ in a nontrivial way?
 \end{block}
 
 \end{frame}
@@ -145,7 +145,7 @@ $A=B$ says $A$ \textbf{is} equal to $B$, \textbf{how} they are equal depends on 
 
   For any point $x\in \mathbb{S}^2$, preimage $H^{-1}(x)$ is a circle $\mathbb{S}^1$. 
 \pause
-  We can visualize this map by considering $ H: \mathbb{R}^3\cong \mathbb{S}^3-\{\infty\} \to \mathbb{S}^2 $ :
+  We can visualize this map by identifying $\mathbb{R}^3\cong \mathbb{S}^3-\{\infty\}$, so that the Hopf fibration appears as a map from $\mathbb{R}^3$ to $\mathbb{S}^2$:
 \begin{figure}
   \begin{center}
     \href{https://www.youtube.com/watch?v=AKotMPGFJYk}{ \includegraphics[height= 0.4\textheight]{figures/Hopf_Fibration.png} }
@@ -155,12 +155,12 @@ $A=B$ says $A$ \textbf{is} equal to $B$, \textbf{how} they are equal depends on 
 \end{frame}
 
 \begin{frame}{Homotopy groups}
-To understand a space $X$, we use some homotopy invariants:
+To understand a space $X$, we study some homotopy invariants:
 \pause
 \begin{itemize}
   \item $\pi_0 X \in \mathrm{Set} $, connected component, how many "pieces" $X$ has. 
     \pause
-  \item Chose a base point $x\in X$, Let $ \mathrm{Map}_*(\mathbb{S}^1,X)  \in \mathrm{Space}$ be the \textbf{space} of loops in $X$ started from $x$. Here $\mathrm{Map}_*$ is the \textbf{ space } of pointed continue maps, the continue structure of it comes from deform maps. 
+  \item Choose a base point $x\in X$. Let $\mathrm{Map}_*(\mathbb{S}^1,X)\in \mathrm{Space}$ be the \textbf{space} of loops in $X$ based at $x$. Here $\mathrm{Map}_*$ is the \textbf{space} of pointed continuous maps, equipped with the topology coming from continuous deformation. 
   \only<3>{
 
 
@@ -243,23 +243,27 @@ To understand a space $X$, we use some homotopy invariants:
 \end{tikzpicture}
   }
     \pause
-  \item $ \pi_1(X,x) := \pi_0\mathrm{Map}_*(\mathbb{S}^1,X) \in \mathrm{Group}$, how many loops in $X$ up to deformation. This is fundamental group.
+  \item $\pi_1(X,x) := \pi_0\mathrm{Map}_*(\mathbb{S}^1,X) \in \mathrm{Group}$ classifies loops in $X$ up to deformation. This is the fundamental group.
     \pause
-  \item $i>1, \pi_i(X,x) := \pi_0\mathrm{Map}_*(\mathbb{S}^i,X)\cong \pi_0\mathrm{Map}_*(\mathbb{S}^1,\mathrm{Map}_*(\mathbb{S}^{i-1},X)) \in \mathrm{Abel}$. This is homotopy group.
+  \item For $i>1$,
+    \[
+      \pi_i(X,x) := \pi_0\mathrm{Map}_*(\mathbb{S}^i,X)\cong \pi_0\mathrm{Map}_*(\mathbb{S}^1,\mathrm{Map}_*(\mathbb{S}^{i-1},X)) \in \mathrm{Abel}.
+    \]
+     This is the $i$th homotopy group.
 \end{itemize}
 \pause
-Let us study the cases $X=\mathbb{S}^n$.
+Let us now study the case $X=\mathbb{S}^n$.
 \end{frame}
 
 \begin{frame}<1-3>[label=ldm]{Homotopy groups of spheres}
 \begin{itemize}
   \item For $i<n$, $\pi_i(\mathbb{S}^n)=\{ 0 \}$, where $0: \mathbb{S}^i\to * \xrightarrow{\mathrm{base}} \mathbb{S}^n$.
     \pause
-  \item For $\pi_n(\mathbb{S}^n)$, let's consider the space $\mathrm{End}_*(\mathbb{S}^n):=\mathrm{Map}_*(\mathbb{S}^n,\mathbb{S}^n)$.
+  \item To study $\pi_n(\mathbb{S}^n)$, let us consider the space $\mathrm{End}_*(\mathbb{S}^n):=\mathrm{Map}_*(\mathbb{S}^n,\mathbb{S}^n)$.
 \end{itemize}
 \pause
 
-Let $f\in \mathrm{End}_*(\mathbb{S}^n)$, take a small disk $D^n_{\epsilon}\subset \mathbb{S}^n$ away from the base point. Then the preimage $f^{-1}(D^n_{\epsilon})\subset \mathbb{S}^n-\{*\}\cong \mathbb{R}^n$ is a disjoint union of disks for $\epsilon$ small enough. Notice that the disks in the union have orientations $+$ and $-$.
+Let $f\in \mathrm{End}_*(\mathbb{S}^n)$, and choose a small disk $D^n_{\epsilon}\subset \mathbb{S}^n$ away from the base point. Then, for $\epsilon$ sufficiently small, the preimage $f^{-1}(D^n_{\epsilon})\subset \mathbb{S}^n-\{*\}\cong \mathbb{R}^n$ is a disjoint union of disks. Notice that the disks in this union have orientations $+$ and $-$.
 
 \only<4>{
 \begin{center}
@@ -476,19 +480,19 @@ Therefore, $\pi_0 \mathrm{End}_*(\mathbb{S}^n) \cong \mathbb{Z}, (j,k) \mapsto j
 \againframe<4->{ldm}
 
 \begin{frame}{Higher homotopy groups of spheres}
-\begin{itemize}
-  \item For $i>n$, $\pi_i(\mathbb{S}^n) = $ ?
+   For $i>n$, $\pi_i(\mathbb{S}^n) = $ ?
     \pause
+\begin{itemize}
   \item For $i>1$, $ \pi_i(\mathbb{S}^1) =\{0\}$.
     \pause
-  \item But $\pi_3(\mathbb{S}^2) = \pi_0 \mathrm{Map}_*(\mathbb{S}^3,\mathbb{S}^2) \ni H $, and $H \nsim 0 $, i.e. $H$ can not deform to $0$
+  \item But $\pi_3(\mathbb{S}^2) = \pi_0 \mathrm{Map}_*(\mathbb{S}^3,\mathbb{S}^2) \ni H $, and $H \nsim 0 $, i.e. $H$ cannot deform to $0$
 \end{itemize}
-How to see that?
+How can we see this?
 \pause
 \[
   \mathrm{Map}_*(\mathbb{S}^{n+1},\mathbb{S}^n) \cong \mathrm{Map}_*(\mathbb{S}^1,\mathrm{End}_*(\mathbb{S}^n))\to \mathrm{Map}_*([0,1],\mathrm{End}_*(\mathbb{S}^n))
 \]
-Then $H$ corresponds to a path (deformation or homotopy) form $0\in \mathrm{End}_*(\mathbb{S}^2)$ to $0$ itself.
+Then $H$ corresponds to a path (that is, a homotopy) from $0\in \mathrm{End}_*(\mathbb{S}^2)$ back to itself.
 
 \end{frame}
 \begin{frame}{Visualize $H$ as deformation}
@@ -499,16 +503,16 @@ Then $H$ corresponds to a path (deformation or homotopy) form $0\in \mathrm{End}
     \end{center}
   \end{figure}
   \pause
-  We can also visualize it as a movement in the configuration space. We will show it in the end.
+  We can also visualize it as a movement in the configuration space. We will show it later.
  
 
 
 \end{frame}
 \section{Algebra}
 
-\begin{frame}{How to define $\mathbb{Z}$ ?}
+\begin{frame}{How do we define $\mathbb{Z}$?}
 \pause
-We can define natural number $\mathbb{N}$ as isomorphic classes of finite sets.
+We can define the natural numbers $\mathbb{N}$ as the isomorphism classes of finite sets.
 \[
   \mathrm{FinSet}_{/\cong} \xrightarrow{|\cdot|} \mathbb{N}, |X \sqcup Y| = |X|+|Y| 
 \]
@@ -519,12 +523,12 @@ We use the \textbf{Grothendieck group} $K_0(\mathrm{FinSet})$ :
 \[
   K_0(\mathrm{FinSet}) = \{ (X,Y)\in (\mathrm{FinSet}_{/\cong})^2   \} / \{ (X \sqcup Z , Y \sqcup Z) \sim (X,Y)\}
 \]
-We can think we formally define $"X-Y"$ in this way.
+In this way, we may think of $(X,Y)$ as the formal difference $X-Y$.
 
 \pause
-But what is $K_i(\mathrm{FinSet})$ for $i>0$ ?
+But what is $K_i(\mathrm{FinSet})$ for $i>0$?
 \end{frame}
-\begin{frame}{Space of "finite sets"}
+\begin{frame}{Space of finite sets}
   Instead of thinking the set of "finite sets", we now consider the space of them $F = \mathrm{FinSet}^{\cong}$ : every point $x\in F$ corresponds to a finite set, and a path between to points corresponds to an isomorphism $f:x\xrightarrow{\cong} y$ of two finite sets. 
   \pause
 
@@ -584,8 +588,8 @@ But what is $K_i(\mathrm{FinSet})$ for $i>0$ ?
 
 \end{itemize}
 \end{frame}
-\begin{frame}{K-space (spectrum) of "finite sets"}
-  We want to add "negative" to $F$. We can consider the space $K(F)$ of (ordered) finite sets, whose elements are marked by $+$ or $-$, and we also want to identify the sets with same "value" $ \| X \| =|X_+|-|X_-| $, and these identifications will be the paths.
+\begin{frame}{K-space (spectrum) of finite sets}
+  We now want to add “negative” elements to $F$. To do this, we consider the space $K(F)$ of ordered finite sets whose elements are marked by $+$ or $-$. We identify signed sets with the same value $\|X\| = |X_+|-|X_-|$, and these identifications are represented by paths.
 \pause
 \begin{center}
 
@@ -737,7 +741,7 @@ But what is $K_i(\mathrm{FinSet})$ for $i>0$ ?
 \end{center}
 \end{frame}
 
-\begin{frame}{K-groups of "finite sets"}
+\begin{frame}{K-groups of finite sets}
   Let $ K_i(\mathrm{FinSet})= \pi_i K(F)$ to be the higher K-groups, we have the following observations:
   \pause
   \begin{itemize}
@@ -752,14 +756,14 @@ But what is $K_i(\mathrm{FinSet})$ for $i>0$ ?
   \end{itemize}
   \pause
   \begin{block}{Answer}
-    We can prove $0=0$ non-trivially with $h:0=1-1=-1+1=0$ !
+    We can prove $0=0$ nontrivially with $h: 0=1-1=-1+1=0$!
   \end{block}
 \end{frame}
   
 \begin{frame}{Algebraic K-groups of a field}
-  Let $k$ be a field, we can follow the same construction for finite dimensional $k$ vector space. Let $V_k=\mathrm{FinVect}_k^{\cong}$, we define \textbf{Algebraic K-groups} of $k$ as $ K_i(k)= \pi_i K(V_k)$.
+  Let $k$ be a field. We can carry out the same construction for finite-dimensional $k$-vector spaces. Let $V_k=\mathrm{FinVect}_k^{\cong}$, and define the \textbf{algebraic K-groups} of $k$ by $K_i(k)=\pi_i K(V_k)$.
 
-(Notice that we can think finite sets as $\mathbb{F}_1$ vector spaces)
+(You may think of finite sets as vector spaces over $\mathbb{F}_1$.)
 
 \pause
 Algebraic K-groups are important invariants with connections to geometry, topology, ring theory, and number theory, but are notoriously difficult to compute.
@@ -773,7 +777,7 @@ Algebraic K-groups are important invariants with connections to geometry, topolo
 \end{itemize}
 \end{frame}
 \begin{frame}{What's more?}
-  But what is the connection between these two topics?
+  What is the connection between these two topics?
   \pause
   \begin{itemize}
     \item In fact, $K_i(\mathrm{FinSet}) \cong \lim_{n\to \infty}\pi_{i+n}(\mathbb{S}^n) = \pi^s_i(\mathbb{S})$.
@@ -781,7 +785,7 @@ Algebraic K-groups are important invariants with connections to geometry, topolo
 \item So, $K(F)$ can be also seen as $\mathrm{Conf}^{fr}( \mathbb{R}^{\infty})$, and both the Hopf map $H$ and $h$ can be represented as movements within it.
   \end{itemize}
   \pause
-  And they are the same!
+  And in fact, they are the same!
   \begin{center}
     
 
@@ -849,13 +853,13 @@ Algebraic K-groups are important invariants with connections to geometry, topolo
   \end{center}
   \pause
   \begin{block}{New Question}
-    Can we find geometric interpretation for general K-groups $K_i(k)$ ?  
+    Can we find a geometric interpretation of the general $K$-groups of a field $K_i(k)$?  
  \end{block} 
 \end{frame}
 
 \begin{frame}{What about cobordism?}
 
-If we put the movement in 3D space, we get a circle:
+If we place this motion in $3$-dimensional space, we obtain a circle:
 \begin{columns}
   
 \column{0.5\linewidth}
@@ -976,27 +980,26 @@ If we put the movement in 3D space, we get a circle:
 
 \pause
 \column{0.5\linewidth}
-This provides a framed circle, meaning an embedding $\mathbb{S}^1 \hookrightarrow \mathbb{R}^n$ with a \textbf{ trivialization } $\tau$ of the normal bundle. We denote $\Omega^{fr}_i$ as the group of cobordism classes of $i$-dimensional framed manifolds. \pause And we also have:
+This gives a framed circle, that is, an embedding $\mathbb{S}^1 \hookrightarrow \mathbb{R}^n$ together with a \textbf{trivialization} $\tau$ of the normal bundle. We write $\Omega^{fr}_i$ for the group of cobordism classes of $i$-dimensional framed manifolds. \pause We also have:
 
 \[
   \Omega^{fr}_i \cong \pi^s_i(\mathbb{S}) 
 \]
 
-Therefore, this framed circle is non-trivial and is the generator of $\Omega^{fr}_1$.
+Therefore, this framed circle is nontrivial and generates $\Omega^{fr}_1$.
 
 \end{columns}
 \end{frame}
 \section{Lasagna}
 \begin{frame}{Intrinsic Skein-Lasagna}
-  A $n$-\textbf{treefold} is a space generally locally homeomorphic to $T\times \mathbb{R}^{n-1}$, where $T$ is a tree. \pause
-  Give a symmetric monoidal category $(\mathcal{C},\otimes)$, define an $n$-$(\mathcal{C},\otimes)$-\textbf{lasagna} $L$ as a framed $n$-treeifold $\mathcal{T}$ with a stratification $ \mathcal{S}$ and the strata are marked compatibly with category $\mathcal{C}$:
+  An $n$-\textbf{treefold} is a space that is locally homeomorphic to $T\times \mathbb{R}^{n-1}$, where $T$ is a tree. \pause
+  Given a symmetric monoidal category $(\mathcal{C},\otimes)$, define an $n$-$(\mathcal{C},\otimes)$-\textbf{lasagna} $L$ to be a framed $n$-treefold $\mathcal{T}$ with a stratification $\mathcal{S}$, whose strata are labeled compatibly with $\mathcal{C}$:
   \pause
   \begin{itemize}
-    \item $0$-codimensional strata are marked with objects; For $i>0$, $i$-codimensional strata are marked with $i$-morphism,
-    \item At the branches of treefold marked with the monoidal product $\otimes$.
+    \item $0$-codimensional strata are labeled by objects; for $i>0$, $i$-codimensional strata are labeled by $i$-morphisms,
+    \item At the branches of the treefold, we mark how pieces are combined using the monoidal product $\otimes$.
   \end{itemize}
 
-  \begin{example}
    \begin{center}
     
 
@@ -1072,34 +1075,33 @@ Therefore, this framed circle is non-trivial and is the generator of $\Omega^{fr
 
 \end{tikzpicture}
    \end{center} 
-  \end{example}
   \end{frame}
   \begin{frame}
 
   \begin{block}{Relation with "Skein-lasagna module"}
     
-    We do not ask for an ambient space $X$ where lasagna embeds (or think $X=\mathbb{R}^\infty$). This means we study the intrinsic geometry of lasagna itself.
+    We do not require an ambient space $X$ into which the lasagna embeds (or, if you prefer, take $X=\mathbb{R}^\infty$). In this sense, we study the intrinsic geometry of the lasagna itself.
  \end{block} 
  \pause
 
-    We can think a lasagna $L$ as a string diagram of $\mathcal{C}$ drawing on $ \mathcal{T}$, or another way to say $L\in \int_{\mathcal{T}} (\mathcal{C},\otimes)$.
-
+    We can think of a lasagna $L$ as a string diagram for $\mathcal{C}$ drawn on $\mathcal{T}$; equivalently, one may write $L\in \int_{\mathcal{T}} (\mathcal{C},\otimes)$.
+\pause
     \begin{block}{Cobordism of lasagna}
     
-    As one expects, we can define the cobordism relation between $L_1,L_2$, if there is a lasagna $W$ with boundary such that $\partial W= L_1 \sqcup -L_2 $. Finally, we define the $n$-th $(\mathcal{C},\otimes)$-\textbf{cobordism group} $\Omega^{\mathcal{C},\otimes}_n$ to be the abelian group generated by $n$-lasagna modulo cobordism relations.
+    As expected, we define a cobordism relation between $L_1$ and $L_2$ if there exists a lasagna $W$ with boundary such that $\partial W = L_1 \sqcup -L_2$. Finally, we define the $n$th $(\mathcal{C},\otimes)$-\textbf{cobordism group} $\Omega^{\mathcal{C},\otimes}_n$ to be the abelian group generated by $n$-lasagnas modulo these cobordism relations.
 
   \end{block}
 
 \end{frame}
 
-\begin{frame}{ $(V_k,\oplus)$-Cobodrism Group}
-  As an example $\Omega^{V_k,\oplus}_n$, where $V_k=\mathrm{FinVect}^{\cong}_k$ is the subcategory of finite-dimensional vector space where the morphisms are all isomorphisms. In this case, we can think a lasagna as a treefold /manifold equips with a $k$-local system.
+\begin{frame}{$(V_k,\oplus)$-Cobordism Group}
+  As an example, consider $\Omega^{V_k,\oplus}_n$, where $V_k=\mathrm{FinVect}^{\cong}_k$ is the category of finite-dimensional vector spaces with all isomorphisms as morphisms. In this case, one can think of a lasagna as a treefold/manifold equipped with a $k$-local system.
   \pause
 \begin{itemize}
-  \item It is clear $ \Omega^{V_k,\oplus}_0\cong \mathbb{Z}$ is classfied dimension.
+  \item Clearly, $\Omega^{V_k,\oplus}_0\cong \mathbb{Z}$, classified by dimension of vector space.
   \pause
 
-\item  $ \Omega^{V_k,\oplus}_1$ is generated by circle $L_V(f)$ marked with vector spaces $V$ and matrix $ f\in \mathrm{GL}_V(k)$. And by adding identity matrices, we find we have a homomorphism $L:\mathrm{GL}_{\infty}(k) \twoheadrightarrow \Omega^{V_k,\oplus}_1$.
+\item $\Omega^{V_k,\oplus}_1$ is generated by circles $L_V(f)$ labeled by a vector space $V$ and a matrix $f\in \mathrm{GL}_V(k)$. By stabilizing with identity matrices, we obtain a homomorphism $L:\mathrm{GL}_{\infty}(k) \twoheadrightarrow \Omega^{V_k,\oplus}_1$.
 
 \end{itemize}
   \begin{center}
@@ -1192,7 +1194,7 @@ Therefore, this framed circle is non-trivial and is the generator of $\Omega^{fr
   \end{frame}
 
 \begin{frame}
- We have one more relation given by surfaces: 
+ We have one more relation coming from surfaces: 
 \begin{center}
   
 
@@ -1234,14 +1236,14 @@ Therefore, this framed circle is non-trivial and is the generator of $\Omega^{fr
 \end{tikzpicture}
 \end{center}
 \pause
-Notice that $k^{\times}\cong \mathrm{GL}_{\infty}(k)/[\mathrm{GL}_{\infty}(k),\mathrm{GL}_{\infty}(k)]$. In fact, one can show the induced homomorphism $ L:k^{\times}  \xrightarrow{\cong} \Omega^{V_k,\oplus}_1$ is isomorphism. And the lasagna induced by Hopf map $H$ is given by $L(-1)$.
+Notice that $k^{\times}\cong \mathrm{GL}_{\infty}(k)/[\mathrm{GL}_{\infty}(k),\mathrm{GL}_{\infty}(k)]$. In fact, one can show that the induced homomorphism $L:k^{\times} \xrightarrow{\cong} \Omega^{V_k,\oplus}_1$ is an isomorphism. The lasagna induced by the Hopf map $H$ is then given by $L(-1)$.
 
 \end{frame}
 \begin{frame}{Generalized Pontryagin–Thom Isomorphism}
   
-Recall that $K_0(k)=\mathbb{Z},K_1(k)=k^{\times}$. This is not just a coincidence:
+Recall that $K_0(k)=\mathbb{Z}$ and $K_1(k)=k^{\times}$. This is not just a coincidence:
 \pause
-\begin{block}{Generalized Pontryagin–Thom Isomorphism (My claim)}
+\begin{block}{Generalized Pontryagin--Thom Isomorphism (Claim)}
 
   For all $n\geq 0$, we have the isomorphism
   \[
@@ -1250,14 +1252,14 @@ Recall that $K_0(k)=\mathbb{Z},K_1(k)=k^{\times}$. This is not just a coincidenc
   
 \end{block}
 \pause
-This answers the new question, which indicates we can view lasagna as elements in $K$-groups, which provides a bridge from hard problems in algebra toward hard problems in geometric topology.
+This answers the new question: it suggests that we can view lasagnas as elements of $K$-groups, providing a bridge from difficult problems in algebra to difficult problems in geometric topology.
 
-So what does it tell us about $n=2$ ?
+So what does this tell us when $n=2$?
 
 \end{frame}
 \begin{frame}{$\Omega^{V_k,\oplus}_2$ and $K_2(k)$}
 
-  For matrices $f,g\in \mathrm{GL}(k)$ such that $[f,g]=1$, one can define following $2$-lasagna $C(f,g)$:
+  For matrices $f,g\in \mathrm{GL}(k)$ such that $[f,g]=1$, one can define the following $2$-lasagna $C(f,g)$:
 
  \begin{center}
   
@@ -1328,22 +1330,22 @@ So what does it tell us about $n=2$ ?
  \end{center} 
  
  \pause
- Recall $K_2(k)= k^\times \otimes k^\times / \langle a \otimes 1-a \rangle$, which means we should find a $3$-lasagna called Ghys' lasagna who bounds $C(a,1-a)$. In other word, we can encode proof/computation by a lasagna.
+ Recall that $K_2(k)= k^\times \otimes k^\times / \langle a \otimes (1-a) \rangle$, which means that we should find a $3$-lasagna, called Ghys' lasagna, that bounds $C(a,1-a)$. In other words, we can encode a proof or computation by a lasagna.
 \pause 
 
-I don't have Ghys' lasagna for now (which has Heegaard genus less than 26), but I have an easier example.
+I do not yet have Ghys' lasagna in hand (it has Heegaard genus less than $26$), but I do have an easier example.
 \end{frame}
 \begin{frame}{$3$-Lasagna bounds $C(e_{12}(a),e_{12}(b))$}
-  For $i\neq j$, let elementary matrices $e_{ij}(a)$ to be
+  \only<1-2>{For $i\neq j$, let the elementary matrices $e_{ij}(a)$ be
   \[
     (e_{ij}(a))_{kl}=\begin{cases}
       1, &\text{ if }k=l,\\
       a, &\text{ if }k=i, l=j,\\
       0, &\text{ otherwise.}
     \end{cases}
-  \]
+\]}
   \pause
-  Notice $ e_{ij}(a)^{-1}=e_{ij}(-a)$, and they satisfy the Steinberg relations:
+  Notice that $e_{ij}(a)^{-1}=e_{ij}(-a)$, and these matrices satisfy the Steinberg relations:
   \[
     [e_{ij}(a),e_{kl}(b)]=\begin{cases}
       e_{il}(ab), &\text{ if } j=k,\\
@@ -1351,15 +1353,15 @@ I don't have Ghys' lasagna for now (which has Heegaard genus less than 26), but 
     \end{cases}
   \]
   \pause
-  Using these relations and Hall-Witt identity, we have the following non-trivial proof of $[e_{12}(a),e_{12}(b)]=\mathbf{1}$:
-  {\small\begin{eqnarray*}
+  Using these relations and the Hall--Witt identity, we obtain the following nontrivial proof that $[e_{12}(a),e_{12}(b)]=\mathbf{1}$:
+  {\begin{eqnarray*}
     &[e_{12}(a),e_{12}(b)]=[[e_{13}(a),e_{32}(1)],e_{12}(b)]\\
     &=[e_{32}(1),[e_{13}(-a),e_{12}(-b)]]^{e_{13}(a)}[e_{13}(a),[e_{32}(-1),e_{12}(-b)]]^{e_{32}(-1)}\\
     &=[e_{32}(1),\mathbf{1}]^{e_{13}(a)}[e_{13}(a),\mathbf{1}]^{e_{32}(-1)}=\mathbf{1} 
   \end{eqnarray*}}
 \end{frame}
 \begin{frame}
-  Following this blueprint, we have such Heegaard splitting to construct a lasagna: 
+  Following this blueprint, we obtain the following Heegaard splitting to construct a lasagna: 
 \begin{center}
 
 
@@ -1656,15 +1658,17 @@ I don't have Ghys' lasagna for now (which has Heegaard genus less than 26), but 
 \draw [color={rgb, 255:red, 208; green, 2; blue, 27 }  ,draw opacity=1 ]   (246,241) -- (288.5,241.75) ;
 
 % Text Node
-\draw (278.17,328.4) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE]  {$=\partial $};
+\draw (285,328.4) node [anchor=north west][inner sep=0.75pt]  [font=\LARGE]  {$=\partial $};
 % Text Node
 \draw (224.55,216.91) node [anchor=north west][inner sep=0.75pt]    {$\sim $};
+% Text Node
+\draw (278,310) node [anchor=north west][inner sep=0.75pt]   [align=left] {Hall-Witt};
 
 
 \end{tikzpicture}
   \end{center}
 \end{frame}
-\begin{frame}{Thank you, hope you have got the brain upgrades!}
+\begin{frame}{Thank you! I hope you enjoyed and gained some new insights.}
   
 \begin{figure}
   \begin{center}
