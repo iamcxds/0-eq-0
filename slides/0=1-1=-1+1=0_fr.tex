@@ -86,7 +86,7 @@
 \title{\texorpdfstring{$0=\textcolor{red}{1}\textcolor{blue}{ -1 }=\textcolor{blue}{ -1 }+\textcolor{red}{1}=0$}{0=1-1=-1+1=0}}
 \subtitle{De l’arithmétique élémentaire au \\ skein-lasagna intrinsèque}
 \author{Keyao Peng}
-\institute{Université de Bourgogne}
+\institute{IMB, Université Bourgogne Europe}
 \date{}
 \begin{document}
 
@@ -778,7 +778,7 @@ Les K-groupes algébriques sont des invariants fondamentaux, liés à la géomé
   \begin{itemize}
     \item En fait, $K_i(\mathrm{FinSet}) \cong \lim_{n\to \infty}\pi_{i+n}(\mathbb{S}^n) = \pi^s_i(\mathbb{S})$.
   \pause
-\item Ainsi, $K(F)$ peut aussi être vu comme $\mathrm{Conf}^{fr}(\mathbb{R}^{\infty})$, et l’application de Hopf $H$ comme le lacet $h$ peuvent tous deux y être représentés par des mouvements.
+\item Ainsi, $K(F)$ peut aussi être vu comme $\mathrm{Conf}^{fr}(\mathbb{R}^{\infty})$, et le lacet $h$ comme l’application de Hopf $H$ peuvent tous deux y être représentés par des mouvements.
   \end{itemize}
   \pause
   Et en fait, ils coïncident !
@@ -1091,7 +1091,7 @@ Par conséquent, ce cercle framé est non trivial et engendre $\Omega^{fr}_1$.
 \end{frame}
 
 \begin{frame}{Groupe de cobordisme-$(V_k,\oplus)$}
-\only<1-2>{Prenons comme exemple $\Omega^{V_k,\oplus}_n$, où $V_k=\mathrm{FinVect}^{\cong}_k$ est la sous-catégorie des espaces vectoriels de dimension finie dont les morphismes sont tous des isomorphismes.} Dans ce cas, on peut voir une lasagne comme un treefold/une variété muni(e) d’un système local en $k$.
+  \only<1-2>{Prenons comme exemple $\Omega^{V_k,\oplus}_n$, où $V_k=\mathrm{FinVect}^{\cong}_k$ est la sous-catégorie des espaces vectoriels de dimension finie dont les morphismes sont tous des isomorphismes.} Dans ce cas, on peut voir une lasagne comme un treefold/une variété muni(e) d’un \textbf{système local} en $k$.
   \pause
 \begin{itemize}
   \item Clairement, $\Omega^{V_k,\oplus}_0\cong \mathbb{Z}$, classifié par la dimension.
@@ -1332,21 +1332,21 @@ Rappelons que $K_2(k)= k^\times \otimes k^\times / \langle a \otimes 1-a \rangle
 
 Je ne dispose pas de la lasagne de Ghys pour l'instant (son genre de Heegaard est inférieur à 26), mais j'ai un exemple plus simple.
 \end{frame}
-\begin{frame}{Une $3$-lasagne borde $C(e_{12}(a),e_{12}(b))$}
+\begin{frame}{Une $3$-lasagne bornes $C(e_{12}(a),e_{12}(b))$}
   \only<1-2>{ Pour $i\neq j$, définissons les matrices élémentaires $e_{ij}(a)$ par
   \[
     (e_{ij}(a))_{kl}=\begin{cases}
-      1, &\text{ if }k=l,\\
-      a, &\text{ if }k=i, l=j,\\
-      0, &\text{ otherwise.}
+      1, &\text{ si }k=l,\\
+      a, &\text{ si }k=i, l=j,\\
+      0, &\text{ sinon.}
     \end{cases}
 \]}
   \pause
   Remarquons que $e_{ij}(a)^{-1}=e_{ij}(-a)$, et qu’elles satisfont les relations de Steinberg :
   \[
     [e_{ij}(a),e_{kl}(b)]=\begin{cases}
-      e_{il}(ab), &\text{ if } j=k,\\
-      \mathbf{1}, &\text{ otherwise. }\\
+      e_{il}(ab), &\text{ si } j=k,\\
+      \mathbf{1}, &\text{ sinon. }\\
     \end{cases}
   \]
   \pause
