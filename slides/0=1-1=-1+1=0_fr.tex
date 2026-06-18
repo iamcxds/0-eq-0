@@ -143,7 +143,7 @@ L’assertion $A=B$ dit que $A$ et $B$ \textbf{sont} égaux, mais le \textbf{man
 
   \[ H: \mathbb{S}^3 \subset \mathbb{C}^2-\{0\} \to \mathbb{CP}^1 \cong \mathbb{S}^2, (z_1,z_2) \mapsto [z_1,z_2] \]
 
-  Pour tout point $x\in \mathbb{S}^2$, l’image réciproque $H^{-1}(x)$ est un cercle $\mathbb{S}^1$. 
+  Pour tout point $x\in \mathbb{S}^2$, la préimage $H^{-1}(x)$ est un cercle $\mathbb{S}^1$. 
 \pause
   On peut visualiser cette application en identifiant $\mathbb{R}^3\cong \mathbb{S}^3-\{\infty\}$, de sorte que la fibration de Hopf apparaisse comme une application de $\mathbb{R}^3$ vers $\mathbb{S}^2$ :
 \begin{figure}
@@ -259,7 +259,7 @@ Pour comprendre un espace $X$, on étudie certains invariants d’homotopie :
 \end{itemize}
 \pause
 
-Soit $f\in \mathrm{End}_*(\mathbb{S}^n)$, et choisissons un petit disque $D^n_{\epsilon}\subset \mathbb{S}^n$ loin du point base. Alors, pour $\epsilon$ suffisamment petit, l’image réciproque $f^{-1}(D^n_{\epsilon})\subset \mathbb{S}^n-\{*\}\cong \mathbb{R}^n$ est une union disjointe de disques. Remarquons que ces disques portent des orientations $+$ ou $-$.
+Soit $f\in \mathrm{End}_*(\mathbb{S}^n)$, et choisissons un petit disque $D^n_{\epsilon}\subset \mathbb{S}^n$ loin du point base. Alors, pour $\epsilon$ suffisamment petit, la préimage $f^{-1}(D^n_{\epsilon})\subset \mathbb{S}^n-\{*\}\cong \mathbb{R}^n$ est une union disjointe de disques. Remarquons que ces disques portent des orientations $+$ ou $-$.
 
 \only<4>{
 \begin{center}
@@ -336,7 +336,7 @@ Soit $f\in \mathrm{End}_*(\mathbb{S}^n)$, et choisissons un petit disque $D^n_{\
 \end{center}
 }
 \only<5>{
-This gives an isomorphism to the configuration space of disks. 
+Cela donne un isomorphisme avec l'espace de configuration des disques.
 \[ \mathrm{End}_*(\mathbb{S}^n) \cong \mathrm{Conf}^{fr}( \mathbb{R}^n) = \bigcup_{j,k}\mathrm{Emb}( \bigsqcup_j D^n_+ \sqcup \bigsqcup_k D^n_- , \mathbb{R}^n )
 \]
 Ainsi, $\pi_0 \mathrm{End}_*(\mathbb{S}^n) \cong \mathbb{Z}$, via $(j,k) \mapsto j-k$
@@ -525,7 +525,11 @@ On peut voir cela comme une définition formelle de $X-Y$.
 Mais que vaut $K_i(\mathrm{FinSet})$ pour $i>0$ ?
 \end{frame}
 \begin{frame}{Espace des ensembles finis}
-  Au lieu de considérer seulement l’ensemble des ensembles finis, nous considérons maintenant l’espace $F = \mathrm{FinSet}^{\cong}$ : chaque point $x\in F$ correspond à un ensemble fini, et un chemin entre deux points correspond à un isomorphisme $f:x\xrightarrow{\cong} y$ entre les ensembles finis. 
+  Au lieu de considérer seulement l’ensemble des ensembles finis, nous considérons maintenant l’\textbf{espace (de modules)} $F = \mathrm{FinSet}^{\cong}$ : 
+\begin{itemize}
+  \item chaque point $x\in F$ correspond à un ensemble fini,
+  \item un chemin entre deux points correspond à un isomorphisme $f:x\xrightarrow{\cong} y$ entre les ensembles finis.
+\end{itemize}
   \pause
 
 \begin{center}
@@ -585,7 +589,7 @@ Mais que vaut $K_i(\mathrm{FinSet})$ pour $i>0$ ?
 \end{itemize}
 \end{frame}
 \begin{frame}{K-espace (spectre) des ensembles finis}
-  Nous voulons maintenant ajouter des « termes négatifs » à $F$. Pour cela, on considère l’espace $K(F)$ des ensembles finis (ordonnés) dont les éléments sont marqués par $+$ ou $-$. Nous identifions les ensembles signés ayant la même « valeur » $\|X\|=|X_+|-|X_-|$, et ces identifications sont représentées par des chemins.
+  Nous voulons maintenant ajouter des « termes négatifs » à $F$. Pour cela, on considère l’espace $K(F)$ des \textbf{ensembles finis ordonnés} dont les éléments sont marqués par $+$ ou $-$. Nous identifions les ensembles signés ayant la même « valeur » $\|X\|=|X_+|-|X_-|$, et ces identifications sont représentées par des chemins.
 \pause
 \begin{center}
 
@@ -619,49 +623,31 @@ Mais que vaut $K_i(\mathrm{FinSet})$ pour $i>0$ ?
 %Shape: Circle [id:dp9743438242870825] 
 \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (150,40) .. controls (150,37.24) and (152.24,35) .. (155,35) .. controls (157.76,35) and (160,37.24) .. (160,40) .. controls (160,42.76) and (157.76,45) .. (155,45) .. controls (152.24,45) and (150,42.76) .. (150,40) -- cycle ;
 %Curve Lines [id:da3723191348864274] 
-\draw    (153.64,41.57) .. controls (136.87,61.11) and (138.65,66.84) .. (153.81,83.68) ;
-\draw [shift={(155,85)}, rotate = 227.73] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-\draw [shift={(155,40)}, rotate = 131.19] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw    (155,40) .. controls (136.33,61.33) and (138.33,66.67) .. (155,85) ;
 %Curve Lines [id:da7917177061632026] 
-\draw    (152.9,85.73) .. controls (126.91,95.3) and (127.66,117.2) .. (153.39,133.98) ;
-\draw [shift={(155,135)}, rotate = 211.76] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-\draw [shift={(155,85)}, rotate = 161.97] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw    (155,85) .. controls (126.33,94.33) and (127,117.67) .. (155,135) ;
 %Curve Lines [id:da48696026802363557] 
-\draw    (156.92,40.72) .. controls (197.51,57.08) and (191.32,120.58) .. (156.61,134.4) ;
-\draw [shift={(155,135)}, rotate = 340.94] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-\draw [shift={(155,40)}, rotate = 19.49] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw    (155,40) .. controls (198.33,55.33) and (191.67,122.33) .. (155,135) ;
 %Shape: Ellipse [id:dp20966307022054598] 
 \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 248; green, 231; blue, 28 }  ,fill opacity=1 ] (52.94,66) .. controls (52.94,46.67) and (64.13,31) .. (77.94,31) .. controls (91.74,31) and (102.94,46.67) .. (102.94,66) .. controls (102.94,85.33) and (91.74,101) .. (77.94,101) .. controls (64.13,101) and (52.94,85.33) .. (52.94,66) -- cycle ;
 %Shape: Circle [id:dp9073393822290099] 
 \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (72.94,86) .. controls (72.94,83.24) and (75.18,81) .. (77.94,81) .. controls (80.7,81) and (82.94,83.24) .. (82.94,86) .. controls (82.94,88.76) and (80.7,91) .. (77.94,91) .. controls (75.18,91) and (72.94,88.76) .. (72.94,86) -- cycle ;
 %Curve Lines [id:da9045538376069651] 
-\draw    (75.94,87.15) .. controls (51.1,101.9) and (50.64,118.42) .. (76.33,134.99) ;
-\draw [shift={(77.94,136)}, rotate = 211.76] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-\draw [shift={(77.94,86)}, rotate = 150.71] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw    (77.94,86) .. controls (50.6,101.33) and (49.94,118.67) .. (77.94,136) ;
 %Curve Lines [id:da022230988628577197] 
-\draw    (93.76,52.98) .. controls (101.9,73.16) and (95.85,82.13) .. (79.73,85.64) ;
-\draw [shift={(77.94,86)}, rotate = 349.51] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-\draw [shift={(92.94,51)}, rotate = 66.6] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw    (92.94,51) .. controls (102.6,73.33) and (95.94,82.67) .. (77.94,86) ;
 %Curve Lines [id:da2903576495179958] 
-\draw    (71.32,47.77) .. controls (51.86,69.48) and (61.29,75.21) .. (76.28,84.93) ;
-\draw [shift={(77.94,86)}, rotate = 213.15] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-\draw [shift={(72.94,46)}, rotate = 132.94] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw    (72.94,46) .. controls (50.6,70) and (61.6,75.33) .. (77.94,86) ;
 %Shape: Ellipse [id:dp036971068231425264] 
 \draw  [color={rgb, 255:red, 0; green, 0; blue, 0 }  ,draw opacity=1 ][fill={rgb, 255:red, 248; green, 231; blue, 28 }  ,fill opacity=1 ] (210,66) .. controls (210,46.67) and (221.19,31) .. (235,31) .. controls (248.81,31) and (260,46.67) .. (260,66) .. controls (260,85.33) and (248.81,101) .. (235,101) .. controls (221.19,101) and (210,85.33) .. (210,66) -- cycle ;
 %Shape: Circle [id:dp9059746394811838] 
 \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (230,86) .. controls (230,83.24) and (232.24,81) .. (235,81) .. controls (237.76,81) and (240,83.24) .. (240,86) .. controls (240,88.76) and (237.76,91) .. (235,91) .. controls (232.24,91) and (230,88.76) .. (230,86) -- cycle ;
 %Curve Lines [id:da2920242121207761] 
-\draw    (233,87.15) .. controls (208.16,101.9) and (207.71,118.42) .. (233.39,134.99) ;
-\draw [shift={(235,136)}, rotate = 211.76] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-\draw [shift={(235,86)}, rotate = 150.71] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw    (235,86) .. controls (207.67,101.33) and (207,118.67) .. (235,136) ;
 %Curve Lines [id:da5347165045324522] 
-\draw    (250.83,52.98) .. controls (258.96,73.16) and (252.92,82.13) .. (236.79,85.64) ;
-\draw [shift={(235,86)}, rotate = 349.51] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-\draw [shift={(250,51)}, rotate = 66.6] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw    (250,51) .. controls (259.67,73.33) and (253,82.67) .. (235,86) ;
 %Curve Lines [id:da09527395398351857] 
-\draw    (228.39,47.77) .. controls (208.93,69.48) and (218.35,75.21) .. (233.35,84.93) ;
-\draw [shift={(235,86)}, rotate = 213.15] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-\draw [shift={(230,46)}, rotate = 132.94] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw    (230,46) .. controls (207.67,70) and (218.67,75.33) .. (235,86) ;
 %Shape: Circle [id:dp12760776343533387] 
 \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (67.94,46) .. controls (67.94,43.24) and (70.18,41) .. (72.94,41) .. controls (75.7,41) and (77.94,43.24) .. (77.94,46) .. controls (77.94,48.76) and (75.7,51) .. (72.94,51) .. controls (70.18,51) and (67.94,48.76) .. (67.94,46) -- cycle ;
 %Shape: Circle [id:dp02366574091579099] 
@@ -671,29 +657,17 @@ Mais que vaut $K_i(\mathrm{FinSet})$ pour $i>0$ ?
 %Shape: Circle [id:dp01635578826497741] 
 \draw  [fill={rgb, 255:red, 0; green, 0; blue, 0 }  ,fill opacity=1 ] (245,51) .. controls (245,48.24) and (247.24,46) .. (250,46) .. controls (252.76,46) and (255,48.24) .. (255,51) .. controls (255,53.76) and (252.76,56) .. (250,56) .. controls (247.24,56) and (245,53.76) .. (245,51) -- cycle ;
 %Curve Lines [id:da368348093092131] 
-\draw    (74.52,44.66) .. controls (86.33,34.82) and (89.19,35.56) .. (92.52,49.22) ;
-\draw [shift={(92.94,51)}, rotate = 257.09] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-\draw [shift={(72.94,46)}, rotate = 319.51] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw    (72.94,46) .. controls (86.6,34.33) and (89.27,35) .. (92.94,51) ;
 %Curve Lines [id:da8538566195852573] 
-\draw    (231.59,44.66) .. controls (243.39,34.82) and (246.26,35.56) .. (249.58,49.22) ;
-\draw [shift={(250,51)}, rotate = 257.09] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-\draw [shift={(230,46)}, rotate = 319.51] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw    (230,46) .. controls (243.67,34.33) and (246.33,35) .. (250,51) ;
 %Curve Lines [id:da9826615383789019] 
-\draw    (70.33,46.94) .. controls (14.94,67.83) and (29.05,122.74) .. (76.49,135.62) ;
-\draw [shift={(77.94,136)}, rotate = 194.04] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-\draw [shift={(72.94,46)}, rotate = 160.98] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw    (72.94,46) .. controls (13.94,66.33) and (28.6,123.67) .. (77.94,136) ;
 %Curve Lines [id:da30966564066347546] 
-\draw    (227.99,46.02) .. controls (213.39,49.71) and (189.64,125.24) .. (233.65,135.7) ;
-\draw [shift={(235,136)}, rotate = 191.39] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-\draw [shift={(230,46)}, rotate = 194.35] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw    (230,46) .. controls (215.67,42.33) and (187,126.33) .. (235,136) ;
 %Curve Lines [id:da8912427859285674] 
-\draw    (94.56,52.23) .. controls (119.94,72.57) and (113.42,117.3) .. (79.51,134.25) ;
-\draw [shift={(77.94,135)}, rotate = 335.16] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-\draw [shift={(92.94,51)}, rotate = 35.86] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw    (92.94,51) .. controls (120.6,71) and (113.94,118.33) .. (77.94,135) ;
 %Curve Lines [id:da5539797399149542] 
-\draw    (251.92,51.96) .. controls (292.43,73.17) and (273.06,131.24) .. (238.59,133.92) ;
-\draw [shift={(237,134)}, rotate = 358.41] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
-\draw [shift={(250,51)}, rotate = 25.33] [color={rgb, 255:red, 0; green, 0; blue, 0 }  ][line width=0.75]    (10.93,-3.29) .. controls (6.95,-1.4) and (3.31,-0.3) .. (0,0) .. controls (3.31,0.3) and (6.95,1.4) .. (10.93,3.29)   ;
+\draw    (250,51) .. controls (293.67,71.67) and (273,133) .. (237,134) ;
 
 % Text Node
 \draw (151,143.4) node [anchor=north west][inner sep=0.75pt]    {$\emptyset \ $};
@@ -738,17 +712,17 @@ Mais que vaut $K_i(\mathrm{FinSet})$ pour $i>0$ ?
 \end{frame}
 
 \begin{frame}{K-groupes des ensembles finis}
-  Posons $K_i(\mathrm{FinSet})=\pi_i K(F)$ pour les K-groupes supérieurs. On a alors les observations suivantes :
+  Posons $K_i(\mathrm{FinSet})=\pi_i(K(F),\emptyset)$ pour les K-groupes supérieurs. On a alors les observations suivantes :
   \pause
   \begin{itemize}
-    \item $\pi_0 K(F) = \mathbb{Z}$, by $ x \mapsto \|x\|$. This coincides with $K_0(\mathrm{FinSet})$. 
+    \item $\pi_0 K(F) = \mathbb{Z}$, by $ x \mapsto \|x\|$. Cela coïncide avec $K_0(\mathrm{FinSet})$. 
       \pause
-    \item On peut construire un lacet $h\in \pi_1 K(F)$ en utilisant les identifications 
+    \item On peut construire un lacet $h\in \pi_1 (K(F),\emptyset)$ en utilisant les identifications 
       \[
         h: \emptyset \sim \{+,-\} \sim \{-,+\} \sim \emptyset
       \]
       \pause
-    \item En fait, $\pi_1 K(F)=\mathbb{Z}/2$, et $h$ en est un générateur. Autrement dit, $h$ donne une preuve non triviale de $0=0$. 
+    \item En fait, $\pi_1 (K(F),\emptyset)=\mathbb{Z}/2$, et $h$ en est un générateur. Autrement dit, $h$ donne une preuve non triviale de $0=0$. 
   \end{itemize}
   \pause
   \begin{block}{Réponse}
@@ -757,7 +731,7 @@ Mais que vaut $K_i(\mathrm{FinSet})$ pour $i>0$ ?
 \end{frame}
   
 \begin{frame}{K-groupes algébriques d’un corps}
-  Soit $k$ un corps. On peut effectuer la même construction pour les espaces vectoriels $k$-linéaires de dimension finie. Si l’on note $V_k=\mathrm{FinVect}_k^{\cong}$, on définit les \textbf{K-groupes algébriques} de $k$ par $K_i(k)=\pi_i K(V_k)$.
+  Soit $k$ un corps. On peut effectuer la même construction pour les espaces vectoriels $k$-linéaires de dimension finie. Si l’on note $V_k=\mathrm{FinVect}_k^{\cong}$, on définit les \textbf{K-groupes algébriques} de $k$ par $K_i(k)=\pi_i (K(V_k),\mathbf{0})$.
 
 (On peut voir les ensembles finis comme des espaces vectoriels sur $\mathbb{F}_1$.)
 
@@ -1232,7 +1206,10 @@ Par conséquent, ce cercle framé est non trivial et engendre $\Omega^{fr}_1$.
 \end{tikzpicture}
 \end{center}
 \pause
-Remarquons que $k^{\times}\cong \mathrm{GL}_{\infty}(k)/[\mathrm{GL}_{\infty}(k),\mathrm{GL}_{\infty}(k)]$. En fait, on peut montrer que le morphisme induit $L:k^{\times} \xrightarrow{\cong} \Omega^{V_k,\oplus}_1$ est un isomorphisme. La lasagne induite par l’application de Hopf $H$ est alors donnée par $L(-1)$.
+Remarquons que $k^{\times}\cong \mathrm{GL}_{\infty}(k)/[\mathrm{GL}_{\infty}(k),\mathrm{GL}_{\infty}(k)]$. En fait, on peut montrer que le morphisme induit $L:k^{\times} \xrightarrow{\cong} \Omega^{V_k,\oplus}_1$ est un isomorphisme. 
+
+\pause
+Par exemple, la lasagne induite par l’application de Hopf $H$ est alors donnée par $L(-1)$.
 
 \end{frame}
 \begin{frame}{Isomorphisme de Pontryagin--Thom généralisé}
@@ -1250,6 +1227,7 @@ Rappelons que $K_0(k)=\mathbb{Z}$ et $K_1(k)=k^{\times}$. Ce n’est pas une sim
 \pause
 Cela répond à la nouvelle question : on peut voir les lasagnes comme des éléments de K-groupes, ce qui fournit un pont entre des problèmes difficiles d’algèbre et des problèmes difficiles de topologie géométrique.
 
+\pause
 Que nous dit alors cette histoire dans le cas $n=2$ ?
 
 \end{frame}
@@ -1326,13 +1304,13 @@ Que nous dit alors cette histoire dans le cas $n=2$ ?
  \end{center} 
  
  \pause
-Rappelons que $K_2(k)= k^\times \otimes k^\times / \langle a \otimes 1-a \rangle$, ce qui signifie qu'il nous faut trouver une $3$-lasagne appelée lasagne de Ghys qui bornes $C(a,1-a)$. Autrement dit, on peut encoder une preuve/un calcul par une lasagne.
+Rappelons que $K_2(k)= k^\times \otimes k^\times / \langle a \otimes 1-a \rangle$, ce qui signifie qu'il nous faut trouver une $3$-lasagne appelée lasagne de Ghys qui borde $C(a,1-a)$. Autrement dit, on peut encoder une preuve/un calcul par une lasagne.
 
 \pause
 
 Je ne dispose pas de la lasagne de Ghys pour l'instant (son genre de Heegaard est inférieur à 26), mais j'ai un exemple plus simple.
 \end{frame}
-\begin{frame}{Une $3$-lasagne bornes $C(e_{12}(a),e_{12}(b))$}
+\begin{frame}{Une $3$-lasagne bordes $C(e_{12}(a),e_{12}(b))$}
   \only<1-2>{ Pour $i\neq j$, définissons les matrices élémentaires $e_{ij}(a)$ par
   \[
     (e_{ij}(a))_{kl}=\begin{cases}
